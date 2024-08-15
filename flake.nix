@@ -10,6 +10,8 @@
 
     nixcfg.url = "github:averyanalex/nixcfg";
 
+    nur.url = "github:nix-community/NUR";
+
     nixpkgs-amnezia.url = "github:averyanalex/nixpkgs/amneziawg";
   };
 
