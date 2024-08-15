@@ -132,7 +132,7 @@ in {
   environment.systemPackages = with pkgs; [
     vim
     wget
-    firefox
+    #firefox
     lenovo-legion
     linuxKernel.packages.linux_zen.lenovo-legion-module
 
