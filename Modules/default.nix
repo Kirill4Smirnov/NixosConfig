@@ -1,4 +1,4 @@
-{inputs, ...} {
+{inputs, ...}: {
   imports = [
     ./Hardware/hardware-configuration.nix
     ./amnezia.nix
