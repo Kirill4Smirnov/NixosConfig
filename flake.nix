@@ -36,6 +36,7 @@
           };
         })
         ./configuration.nix
+        ./Modules
       ];
     };
   };

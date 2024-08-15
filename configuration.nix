@@ -7,14 +7,6 @@
 }: let
   kver = config.boot.kernelPackages.kernel.version; # variable not used at the moment
 in {
-  imports = [
-    ./Hardware/hardware-configuration.nix
-    ./amnezia.nix
-    ./Hardware/Gpu/nvidia.nix
-    ./Hardware/Gpu/amd.nix
-    ./obs-virt-cam.nix
-    ./ollama.nix
-  ];
 
   programs.coolercontrol.enable = true;
   programs.coolercontrol.nvidiaSupport = true;
