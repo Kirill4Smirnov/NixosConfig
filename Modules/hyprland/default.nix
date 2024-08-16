@@ -1,6 +1,6 @@
 {
   hyprland,
-  hyprpicker,
+  #hyprpicker,
   pkgs,
   username,
   system,
