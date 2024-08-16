@@ -7,7 +7,6 @@
 }: let
   kver = config.boot.kernelPackages.kernel.version; # variable not used at the moment
 in {
-
   programs.coolercontrol.enable = true;
   programs.coolercontrol.nvidiaSupport = true;
 
@@ -93,7 +92,6 @@ in {
     driSupport = true;
     driSupport32Bit = true;
   };
-
 
   nixpkgs.config.allowUnfree = true;
   # this trick with predicate wasn't working (the packages weren't been installed)

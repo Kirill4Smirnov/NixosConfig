@@ -1,11 +1,11 @@
-{ pkgs, ... }: {
+{pkgs, ...}: {
   home-manager.users.kenlog = {
     programs.firefox = {
       enable = true;
       profiles.default = {
         isDefault = true;
         extensions = with pkgs.nur.repos.rycee.firefox-addons; [
-          bitwarden
+          simple-translate
           decentraleyes
           ublock-origin
           vimium

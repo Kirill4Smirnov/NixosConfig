@@ -7,5 +7,5 @@
     ./obs-virt-cam.nix
     ./ollama.nix
     ./firefox.nix
-];
-} 
+  ];
+}
