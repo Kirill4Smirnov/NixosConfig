@@ -1,6 +1,5 @@
 {
   pkgs,
-  hyprlandConfig,
   home-manager,
   username,
   ...
@@ -12,6 +11,6 @@ let
   };
 in
 {
-  imports = dotfiles.${hyprlandConfig} or [ ];
+  imports = dotfiles."laptop";
   environment.systemPackages = with pkgs; [ waybar ];
 }
