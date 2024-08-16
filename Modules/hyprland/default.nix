@@ -37,7 +37,7 @@
       gammastep
       grim
       swww
-      hyprpicker.packages.${system}.default
+      hyprpicker
       lxqt.lxqt-policykit
       slurp
       wl-clipboard
