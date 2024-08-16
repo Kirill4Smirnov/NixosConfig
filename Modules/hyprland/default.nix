@@ -14,7 +14,7 @@
     #./hyprlock
     ./mako
     ./swaylock
-    ./redshift
+  #  ./redshift
     ./waybar
     ./wofi
   ];
