@@ -35,6 +35,7 @@
         ({inputs, ...}: {
           nixcfg = {
             username = "kenlog";
+            hyprlandConfig = "laptop";
             desktop = true;
             inherit inputs;
           };
