@@ -28,14 +28,17 @@
   in {
     nixosConfigurations.KenNix = nixpkgs.lib.nixosSystem {
       system = system;
-      specialArgs = {inherit inputs;};
+      specialArgs = {
+        username = "kenlog";
+        hyprlandConfig = "laptop";
+        inherit inputs;
+      };
       modules = [
         home-manager.nixosModule
         nixcfg.nixosModules.default
         ({inputs, ...}: {
           nixcfg = {
             username = "kenlog";
-            hyprlandConfig = "laptop";
             desktop = true;
             inherit inputs;
           };
