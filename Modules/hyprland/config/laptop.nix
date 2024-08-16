@@ -4,11 +4,11 @@
     home.file = {
 
       ".config/hypr/vol.sh" = {
-        source = ../../../sh/vol.sh;
+        source = ../sh/vol.sh;
         executable = true;
       };
       ".config/hypr/toggle_waybar.sh" = {
-        source = ../../../sh/toggle_waybar.sh;
+        source = ../sh/toggle_waybar.sh;
         executable = true;
       };
 
