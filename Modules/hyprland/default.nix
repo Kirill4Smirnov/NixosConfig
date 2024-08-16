@@ -8,7 +8,7 @@
 }:
 {
   imports = [
-    hyprland.nixosModules.default
+    #hyprland.nixosModules.default
     ./config
     ./hypridle
     #./hyprlock
