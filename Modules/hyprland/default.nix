@@ -23,7 +23,7 @@
     gtk = {
       enable = true;
       cursorTheme.name = "Adwaita";
-      cursorTheme.package = pkgs.adwaita-icon-theme;
+      cursorTheme.package = pkgs.gnome.adwaita-icon-theme;
       #theme.name = "adw-gtk3-dark";
       #theme.package = pkgs.adw-gtk3;
     };
