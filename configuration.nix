@@ -58,7 +58,7 @@ in {
         EMPTY_PRE_POST_MIN_AGE = "1800";
       };
       home = {
-        SUBVOLUME = "@home";
+        SUBVOLUME = "/@home";
         TIMELINE_CREATE = true;
         TIMELINE_CLEANUP = true;
         TIMELINE_LIMIT_HOURLY = "10";
