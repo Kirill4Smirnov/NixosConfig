@@ -162,7 +162,7 @@ in {
 
     obsidian
     zoom-us
-    #mathematica
+    mathematica
 
     # nvidia-x11
     # nvidia-settings
