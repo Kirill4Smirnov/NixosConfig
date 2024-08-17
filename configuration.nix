@@ -7,8 +7,6 @@
 }: let
   kver = config.boot.kernelPackages.kernel.version; # variable not used at the moment
 in {
-  programs.coolercontrol.enable = true;
-  programs.coolercontrol.nvidiaSupport = true;
 
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
