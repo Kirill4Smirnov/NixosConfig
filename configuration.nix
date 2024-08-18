@@ -159,6 +159,8 @@ in {
     rocmPackages.rocminfo
     bottles
     tribler
+    ncdu
+    dust
 
     obsidian
     zoom-us
