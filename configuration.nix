@@ -161,6 +161,7 @@ in {
     tribler
     ncdu
     dust
+    spotube
 
     obsidian
     zoom-us
