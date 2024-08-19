@@ -8,7 +8,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    hyprland.url = "github:hyprwm/Hyprland?submodules=1";
+    #hyprland.url = "github:hyprwm/Hyprland?submodules=1";
 
     nixcfg.url = "github:averyanalex/nixcfg";
 
@@ -29,8 +29,8 @@
     nixosConfigurations.KenNix = nixpkgs.lib.nixosSystem {
       system = system;
       specialArgs = {
-        username = "kenlog";
-        hyprlandConfig = "laptop";
+    #    username = "kenlog";
+    #    hyprlandConfig = "laptop";
         inherit inputs;
       };
       modules = [
