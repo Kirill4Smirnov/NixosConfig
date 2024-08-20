@@ -8,5 +8,6 @@
     ./ollama.nix
     ./firefox.nix
    # ./hyprland
+    ./vscode.nix
   ];
 }
