@@ -24,8 +24,8 @@
         [
           # Python
           vm.ms-python.python
-          /*vm.ms-python.vscode-pylance
-          vm.ms-python.mypy-type-checker
+          #vm.ms-python.vscode-pylance
+         /* vm.ms-python.mypy-type-checker
           vm.ms-python.black-formatter
           vm.ms-python.isort
           vm.njpwerner.autodocstring
@@ -53,7 +53,7 @@
           vm.tyriar.sort-lines
           vm.fill-labs.dependi
         ];
- /*     userSettings = {
+      userSettings = {
         # Nix
         "nix.enableLanguageServer" = true;
         "nix.serverPath" = lib.getExe pkgs.unstable.nixd;
@@ -64,7 +64,7 @@
             };
             options = {
               nixos = {
-                expr = "(builtins.getFlake \"/home/olga/nixcfg\").nixosConfigurations.capybara.options";
+                expr = "(builtins.getFlake \"/home/kenlog/Configuration\").nixosConfigurations.KenNix.options";
               };
             };
           };
@@ -79,7 +79,7 @@
         "black-formatter.path" = [ "${pkgs.black}/bin/black" ];
         "python.formatting.provider" = "black";
 
-        "python.languageServer" = "Pylance";
+ #       "python.languageServer" = "Pylance";
 
         "mypy-type-checker.args" = [ "--disable-error-code=import-untyped" ];
         "mypy-type-checker.severity" = {
@@ -120,7 +120,7 @@
         "redhat.telemetry.enabled" = false;
         "sortLines.filterBlankLines" = true;
         "workbench.startupEditor" = "none";
-      }; */
+      }; 
     };
   };
 }
