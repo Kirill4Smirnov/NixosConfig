@@ -111,6 +111,9 @@
         "terminal.integrated.fontFamily" = "MesloLGS NF";
         "editor.fontSize" = 18;
 
+        # UI
+        "window.zoomLevel" = 1.25;
+
         # Other
         "direnv.restart.automatic" = true;
         "editor.formatOnSave" = true;
