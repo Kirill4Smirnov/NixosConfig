@@ -11,7 +11,7 @@
 
     programs.vscode = {
       enable = true;
-      package = pkgs.vscodium;
+      package = pkgs.vscode;
 
       mutableExtensionsDir = false;
       enableUpdateCheck = false;
@@ -24,8 +24,8 @@
         [
           # Python
           vm.ms-python.python
-          #vm.ms-python.vscode-pylance
-         /* vm.ms-python.mypy-type-checker
+          vm.ms-python.vscode-pylance
+          vm.ms-python.mypy-type-checker
           vm.ms-python.black-formatter
           vm.ms-python.isort
           vm.njpwerner.autodocstring
@@ -45,7 +45,7 @@
           vm.rust-lang.rust-analyzer
           vm.tamasfe.even-better-toml
           vm.yzhang.markdown-all-in-one
-*/
+
           # Tools
           vm.editorconfig.editorconfig
           vm.mkhl.direnv
