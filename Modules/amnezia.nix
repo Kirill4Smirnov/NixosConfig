@@ -14,7 +14,7 @@
     })
   ];
 
-  boot.kernelPackages = pkgs.amnezia.linuxKernel.packages.linux-lqx;
+  boot.kernelPackages = pkgs.amnezia.linuxKernel.packages.linux_lqx;
   boot.extraModulePackages = [config.boot.kernelPackages.amneziawg];
   environment.systemPackages = [
     pkgs.amnezia.amneziawg-tools
