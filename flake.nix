@@ -31,8 +31,8 @@
     nixosConfigurations.KenNix = nixpkgs.lib.nixosSystem {
       system = system;
       specialArgs = {
-    #    username = "kenlog";
-    #    hyprlandConfig = "laptop";
+        #    username = "kenlog";
+        #    hyprlandConfig = "laptop";
         inherit inputs;
       };
       modules = [

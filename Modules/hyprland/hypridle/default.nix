@@ -1,11 +1,8 @@
-{ username, ... }:
-{
-
+{username, ...}: {
   services.hypridle.enable = true;
 
   home-manager.users.${username} = _: {
     home.file = {
-
       ".config/hypr/hypridle.conf".text = ''
         	general {
             lock_cmd = pidof swaylock || swaylock       # avoid starting multiple hyprlock instances.

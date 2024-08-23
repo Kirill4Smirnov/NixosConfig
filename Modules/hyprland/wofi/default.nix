@@ -1,6 +1,9 @@
-{ pkgs, username, ... }:
 {
-  environment.systemPackages = with pkgs; [ wofi ];
+  pkgs,
+  username,
+  ...
+}: {
+  environment.systemPackages = with pkgs; [wofi];
 
   home-manager.users.${username} = {
     home.file = {
@@ -40,7 +43,7 @@
         	background-color: rgba(21, 48,138,0.7);
         	background-image: url('/home/${username}/.config/backgrounds/keyboard.png');
         	background-size: cover;
-        	background-repeat: no-repeat; 
+        	background-repeat: no-repeat;
         	border-radius: 16px;
         }
 
@@ -52,7 +55,7 @@
         	border: 3px solid #006400;
         	color: #fff;
         	font-weight: bold;
-        	background-color: transparent; 
+        	background-color: transparent;
         	outline: none;
         	border-radius: 16px;
         	z-index: 1;

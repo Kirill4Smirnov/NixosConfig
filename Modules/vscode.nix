@@ -1,13 +1,14 @@
-{ inputs
-, pkgs
-, lib
-, ...
+{
+  inputs,
+  pkgs,
+  lib,
+  ...
 }: {
   hm = {
-   # home.file.".vscode/argv.json".text = builtins.toJSON {
-   #   enable-crash-reporter = false;
-   #   password-store = "gnome-libsecret";
-   # };
+    # home.file.".vscode/argv.json".text = builtins.toJSON {
+    #   enable-crash-reporter = false;
+    #   password-store = "gnome-libsecret";
+    # };
 
     programs.vscode = {
       enable = true;
@@ -17,43 +18,41 @@
       enableUpdateCheck = false;
       enableExtensionUpdateCheck = false;
 
-      extensions =
-        let
-          vm = inputs.nix-vscode-extensions.extensions.${pkgs.hostPlatform.system}.vscode-marketplace;
-        in
-        [
-          # Python
-          vm.ms-python.python
-          vm.ms-python.vscode-pylance
-          vm.ms-python.mypy-type-checker
-          vm.ms-python.black-formatter
-          vm.ms-python.isort
-          vm.njpwerner.autodocstring
+      extensions = let
+        vm = inputs.nix-vscode-extensions.extensions.${pkgs.hostPlatform.system}.vscode-marketplace;
+      in [
+        # Python
+        vm.ms-python.python
+        vm.ms-python.vscode-pylance
+        vm.ms-python.mypy-type-checker
+        vm.ms-python.black-formatter
+        vm.ms-python.isort
+        vm.njpwerner.autodocstring
 
-          # Jupyter
-          pkgs.vscode-extensions.ms-toolsai.jupyter
-          pkgs.vscode-extensions.ms-toolsai.jupyter-renderers
-          vm.ms-toolsai.datawrangler
+        # Jupyter
+        pkgs.vscode-extensions.ms-toolsai.jupyter
+        pkgs.vscode-extensions.ms-toolsai.jupyter-renderers
+        vm.ms-toolsai.datawrangler
 
-          # Other languages
-          pkgs.vscode-extensions.ms-vscode.cpptools
-          vm.jnoortheen.nix-ide
-          vm.mechatroner.rainbow-csv
-          vm.redhat.java
-          vm.redhat.vscode-xml
-          vm.redhat.vscode-yaml
-          vm.rust-lang.rust-analyzer
-          vm.tamasfe.even-better-toml
-          vm.yzhang.markdown-all-in-one
+        # Other languages
+        pkgs.vscode-extensions.ms-vscode.cpptools
+        vm.jnoortheen.nix-ide
+        vm.mechatroner.rainbow-csv
+        vm.redhat.java
+        vm.redhat.vscode-xml
+        vm.redhat.vscode-yaml
+        vm.rust-lang.rust-analyzer
+        vm.tamasfe.even-better-toml
+        vm.yzhang.markdown-all-in-one
 
-          # Tools
-          vm.editorconfig.editorconfig
-          vm.mkhl.direnv
-          vm.stkb.rewrap
-          vm.tyriar.sort-lines
-          vm.fill-labs.dependi
-          vm.asvetliakov.vscode-neovim
-        ];
+        # Tools
+        vm.editorconfig.editorconfig
+        vm.mkhl.direnv
+        vm.stkb.rewrap
+        vm.tyriar.sort-lines
+        vm.fill-labs.dependi
+        vm.asvetliakov.vscode-neovim
+      ];
       userSettings = {
         # Nix
         "nix.enableLanguageServer" = true;
@@ -61,7 +60,7 @@
         "nix.serverSettings" = {
           nixd = {
             formatting = {
-              command = [ (lib.getExe pkgs.nixpkgs-fmt) ];
+              command = [(lib.getExe pkgs.nixpkgs-fmt)];
             };
             options = {
               nixos = {
@@ -77,12 +76,12 @@
         # Python
         "python.analysis.autoImportCompletions" = true;
 
-        "black-formatter.path" = [ "${pkgs.black}/bin/black" ];
+        "black-formatter.path" = ["${pkgs.black}/bin/black"];
         "python.formatting.provider" = "black";
 
- #       "python.languageServer" = "Pylance";
+        #       "python.languageServer" = "Pylance";
 
-        "mypy-type-checker.args" = [ "--disable-error-code=import-untyped" ];
+        "mypy-type-checker.args" = ["--disable-error-code=import-untyped"];
         "mypy-type-checker.severity" = {
           "error" = "Warning";
           "note" = "Information";
@@ -92,7 +91,7 @@
         "python.poetryPath" = "${pkgs.poetry}/bin/poetry";
         "python.venvPath" = "~/.cache/pypoetry/virtualenvs";
 
-        "isort.path" = [ "${pkgs.python3Packages.isort}/bin/isort" ];
+        "isort.path" = ["${pkgs.python3Packages.isort}/bin/isort"];
 
         "python.testing.pytestEnabled" = true;
         "python.testing.pytestPath" = "${pkgs.python3Packages.pytest}/bin/pytest";
@@ -125,7 +124,7 @@
         "redhat.telemetry.enabled" = false;
         "sortLines.filterBlankLines" = true;
         "workbench.startupEditor" = "none";
-      }; 
+      };
     };
   };
 

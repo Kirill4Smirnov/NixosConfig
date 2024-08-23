@@ -3,9 +3,8 @@
   home-manager,
   username,
   ...
-}:
-{
-  environment.systemPackages = with pkgs; [ mako ];
+}: {
+  environment.systemPackages = with pkgs; [mako];
   home-manager.users.${username} = {
     home.file = {
       ".config/mako/config".text = ''

@@ -2,13 +2,11 @@
   home-manager,
   username,
   ...
-}:
-let
+}: let
   dotfiles = {
-    "laptop" = [ (import ./laptop.nix { inherit home-manager username; }) ];
-    "desktop" = [ (import ./desktop.nix { inherit home-manager username; }) ];
+    "laptop" = [(import ./laptop.nix {inherit home-manager username;})];
+    "desktop" = [(import ./desktop.nix {inherit home-manager username;})];
   };
-in
-{
+in {
   imports = dotfiles."laptop";
 }

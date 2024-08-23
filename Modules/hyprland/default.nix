@@ -5,8 +5,7 @@
   username,
   system,
   ...
-}:
-{
+}: {
   imports = [
     #hyprland.nixosModules.default
     ./config
@@ -14,7 +13,7 @@
     #./hyprlock
     ./mako
     ./swaylock
-  #  ./redshift
+    #  ./redshift
     ./waybar
     ./wofi
   ];
@@ -30,7 +29,7 @@
   };
 
   environment = {
-    # Deprecated 
+    # Deprecated
     #sessionVariables.WLR_NO_HARDWARE_CURSORS = "1";
     sessionVariables.NIXOS_OZONE_WL = "1";
     systemPackages = with pkgs; [
@@ -65,10 +64,10 @@
           "xdph"
           "gtk"
         ];
-        "org.freedesktop.impl.portal.Secret" = [ "gnome-keyring" ];
-        "org.freedesktop.portal.FileChooser" = [ "xdg-desktop-portal-gtk" ];
+        "org.freedesktop.impl.portal.Secret" = ["gnome-keyring"];
+        "org.freedesktop.portal.FileChooser" = ["xdg-desktop-portal-gtk"];
       };
     };
-    extraPortals = with pkgs; [ xdg-desktop-portal-gtk ];
+    extraPortals = with pkgs; [xdg-desktop-portal-gtk];
   };
 }
