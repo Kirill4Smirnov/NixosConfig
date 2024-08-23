@@ -40,7 +40,7 @@ in {
     cleanupInterval = "1d";
     configs = {
       home = {
-        SUBVOLUME = "/home/kenlog";
+        SUBVOLUME = "/home";
         TIMELINE_CREATE = true;
         TIMELINE_CLEANUP = true;
         TIMELINE_LIMIT_HOURLY = "10";
