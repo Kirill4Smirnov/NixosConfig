@@ -56,6 +56,11 @@ in {
         EMPTY_PRE_POST_CLEANUP = "yes";
         EMPTY_PRE_POST_MIN_AGE = "1800";
       };
+      root = {
+        SUBVOLUME="/";
+        TIMELINE_CREATE = true;
+        TIMELINE_CLEANUP = true;
+      };
     };
   };
 
