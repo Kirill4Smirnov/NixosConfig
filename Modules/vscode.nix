@@ -127,4 +127,6 @@
       }; 
     };
   };
+
+  programs.direnv.enable = true;
 }
