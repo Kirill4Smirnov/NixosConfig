@@ -52,6 +52,7 @@
           vm.stkb.rewrap
           vm.tyriar.sort-lines
           vm.fill-labs.dependi
+          vm.asvetliakov.vscode-neovim
         ];
       userSettings = {
         # Nix
