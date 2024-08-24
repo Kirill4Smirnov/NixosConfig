@@ -7,6 +7,7 @@
 }: let
   kver = config.boot.kernelPackages.kernel.version; # variable not used at the moment
 in {
+
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -14,6 +15,9 @@ in {
     "amd_pstate=active"
     "resume_offset=533760"
   ];
+
+
+  boot.loader.systemd-boot.memtest86.enable = true;
 
   boot.extraModulePackages = [config.boot.kernelPackages.lenovo-legion-module];
 
