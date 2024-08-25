@@ -13,7 +13,7 @@
 
   environment.systemPackages = with pkgs; [
     egl-wayland
-]
+];
 
   hardware.nvidia = {
     # Modesetting is required.
