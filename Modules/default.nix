@@ -1,7 +1,7 @@
 {inputs, ...}: {
   imports = [
     ./Hardware/hardware-configuration.nix
-#    ./amnezia.nix
+    ./amnezia.nix
     ./Hardware/Gpu/nvidia.nix
     ./Hardware/Gpu/amd.nix
     ./obs-virt-cam.nix
