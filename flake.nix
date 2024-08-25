@@ -12,9 +12,9 @@
 
 #    nixcfg.url = "github:averyanalex/nixcfg";
 
-    nur.url = "github:nix-community/NUR";
+ #   nur.url = "github:nix-community/NUR";
 
-    nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
+  #  nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
 
     nixpkgs-amnezia.url = "github:averyanalex/nixpkgs/amneziawg";
   };
@@ -37,7 +37,7 @@
       };
       modules = [
         home-manager.nixosModule
-        nixcfg.nixosModules.default
+#        nixcfg.nixosModules.default
 #        ({inputs, ...}: {
 #          nixcfg = {
 #            username = "kenlog";

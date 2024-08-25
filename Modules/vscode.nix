@@ -56,7 +56,7 @@
       userSettings = {
         # Nix
         "nix.enableLanguageServer" = true;
-        "nix.serverPath" = lib.getExe pkgs.unstable.nixd;
+        "nix.serverPath" = lib.getExe pkgs.nixd;
         "nix.serverSettings" = {
           nixd = {
             formatting = {

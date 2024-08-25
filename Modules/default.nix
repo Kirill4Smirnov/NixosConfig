@@ -6,8 +6,7 @@
     ./Hardware/Gpu/amd.nix
     ./obs-virt-cam.nix
     ./ollama.nix
-    ./firefox.nix
-    # ./hyprland
-    ./vscode.nix
+   # ./firefox.nix
+   # ./vscode.nix
   ];
 }

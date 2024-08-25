@@ -24,8 +24,8 @@ in {
   services.xserver.enable = true;
   services.xserver.videoDrivers = ["nvidia"];
 
-  services.xserver.displayManager.sddm.enable = true;
-  services.xserver.desktopManager.plasma6.enable = true;
+  services.displayManager.sddm.enable = true;
+  services.desktopManager.plasma6.enable = true;
 
   hardware.opengl = {
     enable = true;
@@ -68,7 +68,7 @@ in {
   environment.systemPackages = with pkgs; [
     vim
     wget
-    #firefox
+    firefox
    # lenovo-legion
    # linuxKernel.packages.linux_zen.lenovo-legion-module
 
