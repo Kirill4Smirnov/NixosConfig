@@ -10,7 +10,7 @@
 
     nixcfg.url = "github:averyanalex/nixcfg";
 
- #   nur.url = "github:nix-community/NUR";
+    nur.url = "github:nix-community/NUR";
 
   #  nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
 

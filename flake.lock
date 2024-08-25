@@ -21,6 +21,24 @@
         "type": "github"
       }
     },
+    "nixcfg": {
+      "inputs": {
+        "srvos": "srvos"
+      },
+      "locked": {
+        "lastModified": 1724273721,
+        "narHash": "sha256-R+tIRTcGu1DOw5WE52jGuSxPcA7BSCwcgN5zhyrm3m4=",
+        "owner": "averyanalex",
+        "repo": "nixcfg",
+        "rev": "2585d2e407548457e4cb9d4fb8b381d59b391070",
+        "type": "github"
+      },
+      "original": {
+        "owner": "averyanalex",
+        "repo": "nixcfg",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1723556749,
@@ -72,9 +90,26 @@
     "root": {
       "inputs": {
         "home-manager": "home-manager",
+        "nixcfg": "nixcfg",
         "nixpkgs": "nixpkgs",
         "nixpkgs-amnezia": "nixpkgs-amnezia",
         "nixpkgs-unstable": "nixpkgs-unstable"
+      }
+    },
+    "srvos": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1722473484,
+        "narHash": "sha256-gl0NnSdNwjuAgIHfmGSVx/2jKHNfN5ie8Ex6OTjfczY=",
+        "owner": "nix-community",
+        "repo": "srvos",
+        "rev": "46a59095dc9228a945bf1ee8160b397eb502ad6c",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "srvos",
+        "type": "github"
       }
     }
   },
