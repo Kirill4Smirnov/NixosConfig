@@ -28,8 +28,8 @@ in {
   #services.displayManager.sddm.wayland.enable = true;
   #services.desktopManager.plasma6.enable = true;
 
-  services.displayManager.gdm.enable = true;
-  services.desktopManager.gnome.enable = true;
+  services.xserver.displayManager.gdm.enable = true;
+  services.xserver.desktopManager.gnome.enable = true;
 
   hardware.opengl = {
     enable = true;
@@ -73,7 +73,7 @@ in {
     vim
     wget
     firefox
-   # lenovo-legion
+    lenovo-legion
    # linuxKernel.packages.linux_zen.lenovo-legion-module
 
     inxi
@@ -84,11 +84,11 @@ in {
     wezterm
     gparted
     yazi
-   # gnome.gnome-tweaks
-   # gnomeExtensions.vitals
-   # gnomeExtensions.hibernate-status-button
+    gnome.gnome-tweaks
+    gnomeExtensions.vitals
+    gnomeExtensions.hibernate-status-button
     keepassxc
-   # gnome-extension-manager
+    gnome-extension-manager
     power-profiles-daemon
     telegram-desktop
     timeshift
