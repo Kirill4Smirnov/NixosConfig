@@ -87,10 +87,13 @@ in {
     gnome.gnome-tweaks
     gnomeExtensions.vitals
     gnomeExtensions.hibernate-status-button
-    keepassxc
+    gnomeExtensions.blur-my-shell
     gnome-extension-manager
+    vimix-cursors
+
     power-profiles-daemon
     telegram-desktop
+    keepassxc
     timeshift
     fzf
     git
