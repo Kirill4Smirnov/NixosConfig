@@ -11,6 +11,10 @@
 
   services.xserver.videoDrivers = ["nvidia"];
 
+  environment.systemPackages = with pkgs; [
+    egl-wayland
+]
+
   hardware.nvidia = {
     # Modesetting is required.
     modesetting.enable = true;
