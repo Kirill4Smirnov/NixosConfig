@@ -28,7 +28,7 @@
     system = "x86_64-linux";
     pkgs = nixpkgs.legacyPackages.${system};
   in {
-    nixosConfigurations.KenNix = nixpkgs.lib.nixosSystem {
+    nixosConfiguration = nixpkgs.lib.nixosSystem {
       system = system;
       specialArgs = {
         #    username = "kenlog";
