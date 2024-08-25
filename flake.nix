@@ -8,8 +8,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    #hyprland.url = "github:hyprwm/Hyprland?submodules=1";
-
     nixcfg.url = "github:averyanalex/nixcfg";
 
  #   nur.url = "github:nix-community/NUR";
@@ -22,7 +20,7 @@
   outputs = inputs @ {
     nixpkgs,
     home-manager,
-    #nixcfg,
+    nixcfg,
     ...
   }: let
     system = "x86_64-linux";
