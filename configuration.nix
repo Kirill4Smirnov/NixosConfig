@@ -12,6 +12,8 @@ in {
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
+  boot.initrd.luks.devices."luks-47226b1a-1d7e-49d3-9ed0-d8e2fd63af57".device = "/dev/disk/by-uuid/47226b1a-1d7e-49d3-9ed0-d8e2fd63af57";
+
   boot.loader.systemd-boot.memtest86.enable = true;
 
 
