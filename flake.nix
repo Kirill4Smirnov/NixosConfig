@@ -10,7 +10,7 @@
 
     #hyprland.url = "github:hyprwm/Hyprland?submodules=1";
 
-#    nixcfg.url = "github:averyanalex/nixcfg";
+    nixcfg.url = "github:averyanalex/nixcfg";
 
  #   nur.url = "github:nix-community/NUR";
 
@@ -28,7 +28,7 @@
     system = "x86_64-linux";
     pkgs = nixpkgs.legacyPackages.${system};
   in {
-    nixosConfiguration = nixpkgs.lib.nixosSystem {
+    nixosConfigurations.KenNix = nixpkgs.lib.nixosSystem {
       system = system;
       specialArgs = {
         #    username = "kenlog";
@@ -37,14 +37,14 @@
       };
       modules = [
         home-manager.nixosModule
-#        nixcfg.nixosModules.default
-#        ({inputs, ...}: {
-#          nixcfg = {
-#            username = "kenlog";
-#            desktop = true;
-#            inherit inputs;
-#          };
-#        })
+        nixcfg.nixosModules.default
+        ({inputs, ...}: {
+          nixcfg = {
+            username = "kenlog";
+            desktop = true;
+            inherit inputs;
+          };
+        })
         ./configuration.nix
         ./Modules
       ];
