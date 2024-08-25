@@ -10,7 +10,7 @@
 
     #hyprland.url = "github:hyprwm/Hyprland?submodules=1";
 
-    nixcfg.url = "github:averyanalex/nixcfg";
+#    nixcfg.url = "github:averyanalex/nixcfg";
 
     nur.url = "github:nix-community/NUR";
 
@@ -22,7 +22,7 @@
   outputs = inputs @ {
     nixpkgs,
     home-manager,
-    nixcfg,
+    #nixcfg,
     ...
   }: let
     system = "x86_64-linux";
@@ -38,13 +38,13 @@
       modules = [
         home-manager.nixosModule
         nixcfg.nixosModules.default
-        ({inputs, ...}: {
-          nixcfg = {
-            username = "kenlog";
-            desktop = true;
-            inherit inputs;
-          };
-        })
+#        ({inputs, ...}: {
+#          nixcfg = {
+#            username = "kenlog";
+#            desktop = true;
+#            inherit inputs;
+#          };
+#        })
         ./configuration.nix
         ./Modules
       ];
