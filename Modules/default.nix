@@ -7,6 +7,7 @@
     ./obs-virt-cam.nix
     ./ollama.nix
     ./firefox.nix
-   # ./vscode.nix
+    ./vscode.nix
+    ./brave.nix
   ];
 }

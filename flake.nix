@@ -12,7 +12,7 @@
 
     nur.url = "github:nix-community/NUR";
 
-  #  nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
+    nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
 
     nixpkgs-amnezia.url = "github:averyanalex/nixpkgs/amneziawg";
   };
