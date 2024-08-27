@@ -7,7 +7,6 @@
 }: let
   kver = config.boot.kernelPackages.kernel.version; # variable not used at the moment
 in {
-
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -16,12 +15,10 @@ in {
 
   boot.loader.systemd-boot.memtest86.enable = true;
 
-
   networking.hostName = "KenNix"; # Define your hostname.
   networking.networkmanager.enable = true; # Easiest to use and most distros use this by default.
 
   time.timeZone = "Europe/Moscow";
-
 
   services.xserver.enable = true;
 
@@ -45,9 +42,8 @@ in {
   #    "zoom-us"
   #  ];
 
-
   # Enable CUPS to print documents.
-   services.printing.enable = true;
+  services.printing.enable = true;
 
   hardware.pulseaudio.enable = false;
   services.pipewire = {
@@ -74,7 +70,7 @@ in {
     wget
     firefox
     lenovo-legion
-   # linuxKernel.packages.linux_zen.lenovo-legion-module
+    # linuxKernel.packages.linux_zen.lenovo-legion-module
 
     inxi
     htop
@@ -111,8 +107,8 @@ in {
     neovim
 
     obsidian
-   # zoom-us
-   # mathematica
+    # zoom-us
+    # mathematica
   ];
 
   environment.variables.EDITOR = "vim";

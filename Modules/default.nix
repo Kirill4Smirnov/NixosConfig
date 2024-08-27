@@ -8,7 +8,7 @@
     ./ollama.nix
     ./firefox.nix
     ./vscode.nix
-    ./brave.nix
     ./firejail.nix
+    ./brave.nix
   ];
 }
