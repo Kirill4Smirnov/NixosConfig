@@ -52,6 +52,8 @@
         vm.tyriar.sort-lines
         vm.fill-labs.dependi
         vm.asvetliakov.vscode-neovim
+
+        vm.GitHub.github-vscode-theme
       ];
       userSettings = {
         # Nix
@@ -79,7 +81,7 @@
         "black-formatter.path" = ["${pkgs.black}/bin/black"];
         "python.formatting.provider" = "black";
 
-        #       "python.languageServer" = "Pylance";
+        "python.languageServer" = "Pylance";
 
         "mypy-type-checker.args" = ["--disable-error-code=import-untyped"];
         "mypy-type-checker.severity" = {
@@ -124,6 +126,9 @@
         "redhat.telemetry.enabled" = false;
         "sortLines.filterBlankLines" = true;
         "workbench.startupEditor" = "none";
+
+        "zenMode.centerLayout": false; 
+        "zenMode.hideLineNumbers": false;
       };
     };
   };
