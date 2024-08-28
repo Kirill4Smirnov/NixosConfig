@@ -105,6 +105,7 @@ in {
     ncdu
     dust
     neovim
+    affine
 
     obsidian
     # zoom-us

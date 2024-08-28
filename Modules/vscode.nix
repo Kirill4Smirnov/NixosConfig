@@ -53,7 +53,7 @@
         vm.fill-labs.dependi
         vm.asvetliakov.vscode-neovim
 
-        vm.GitHub.github-vscode-theme
+       # vm.github.github-vscode-theme
       ];
       userSettings = {
         # Nix
@@ -115,6 +115,8 @@
 
         # UI
         "window.zoomLevel" = 1.25;
+        "workbench.colorTheme" = "Abyss";
+
 
         # Other
         "direnv.restart.automatic" = true;
@@ -127,8 +129,8 @@
         "sortLines.filterBlankLines" = true;
         "workbench.startupEditor" = "none";
 
-        "zenMode.centerLayout": false; 
-        "zenMode.hideLineNumbers": false;
+        "zenMode.centerLayout" = false; 
+        "zenMode.hideLineNumbers" = false;
       };
     };
   };
