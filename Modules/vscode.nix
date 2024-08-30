@@ -10,7 +10,7 @@
     #   enable-crash-reporter = false;
     #   password-store = "gnome-libsecret";
     # };
-    home.packages = with pkgs [
+    home.packages = with pkgs; [
       poetry
     ];
 
