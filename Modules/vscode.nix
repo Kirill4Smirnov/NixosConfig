@@ -4,11 +4,15 @@
   lib,
   ...
 }: {
+
   hm = {
     # home.file.".vscode/argv.json".text = builtins.toJSON {
     #   enable-crash-reporter = false;
     #   password-store = "gnome-libsecret";
     # };
+    home.packages = with pkgs [
+      poetry
+    ];
 
     programs.vscode = {
       enable = true;
@@ -41,7 +45,7 @@
         vm.redhat.java
         vm.redhat.vscode-xml
         vm.redhat.vscode-yaml
-        vm.rust-lang.rust-analyzer
+     #   vm.rust-lang.rust-analyzer
         vm.tamasfe.even-better-toml
         vm.yzhang.markdown-all-in-one
 
@@ -62,7 +66,7 @@
         "nix.serverSettings" = {
           nixd = {
             formatting = {
-              command = [(lib.getExe pkgs.nixpkgs-fmt)];
+              command = [ "${pkgs.alejandra}/bin/alejandra" ];
             };
             options = {
               nixos = {
@@ -72,8 +76,8 @@
           };
         };
         # Rust
-        "rust-analyzer.server.path" = "${pkgs.rust-analyzer}/bin/rust-analyzer";
-        "rust-analyzer.check.command" = "clippy";
+      #  "rust-analyzer.server.path" = "${pkgs.rust-analyzer}/bin/rust-analyzer";
+     #   "rust-analyzer.check.command" = "clippy";
 
         # Python
         "python.analysis.autoImportCompletions" = true;
