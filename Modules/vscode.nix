@@ -5,6 +5,10 @@
   ...
 }: {
 
+  imports = [
+    ./python.nix
+  ];
+
   hm = {
     # home.file.".vscode/argv.json".text = builtins.toJSON {
     #   enable-crash-reporter = false;
