@@ -70,7 +70,8 @@ in {
     wget
     firefox
     lenovo-legion
-    # linuxKernel.packages.linux_zen.lenovo-legion-module
+    linuxKernel.packages.linux_zen.lenovo-legion-module
+    linuxKernel.packages.linux_zen.turbostat
 
     inxi
     htop
