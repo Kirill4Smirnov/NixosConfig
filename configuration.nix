@@ -108,7 +108,7 @@ in {
     neovim
     affine
     libreoffice
-
+    planify
 
     obsidian
     # zoom-us
