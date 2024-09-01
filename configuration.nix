@@ -30,8 +30,8 @@ in {
 
   hardware.opengl = {
     enable = true;
-    driSupport = true;
-    driSupport32Bit = true;
+    #driSupport = true;
+    #driSupport32Bit = true;
   };
 
   nixpkgs.config.allowUnfree = true;
