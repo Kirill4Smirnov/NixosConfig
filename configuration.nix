@@ -107,6 +107,8 @@ in {
     dust
     neovim
     affine
+    libreoffice
+
 
     obsidian
     # zoom-us
