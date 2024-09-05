@@ -109,6 +109,7 @@ in {
     affine
     libreoffice
     planify
+    texmaker
 
     obsidian
     # zoom-us
