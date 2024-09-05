@@ -65,6 +65,9 @@ in {
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
+  boot.kernelModules = [ "lenovo-legion-module" ];
+  boot.extraModulePackages = with config.boot.kernelPackages; [ lenovo-legion-module ];
+
   environment.systemPackages = with pkgs; [
     vim
     wget
