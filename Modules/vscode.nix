@@ -36,6 +36,9 @@
         vm.ms-python.black-formatter
         vm.ms-python.isort
         vm.njpwerner.autodocstring
+        vm.ms-python.autopep8
+        vm.ms-toolsai.jupyter
+        vm.KevinRose.vsc-python-indent
 
         # Jupyter
         pkgs.vscode-extensions.ms-toolsai.jupyter
