@@ -10,5 +10,6 @@
     ./vscode.nix
     ./firejail.nix
     ./brave.nix
+    ./nushell.nix
   ];
 }

@@ -66,7 +66,7 @@ in {
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
   #boot.kernelModules = [ "lenovo-legion-module" ];
-  boot.extraModulePackages = [ config.boot.kernelPackages.lenovo-legion-module ]; 
+  boot.extraModulePackages = [config.boot.kernelPackages.lenovo-legion-module];
 
   environment.systemPackages = with pkgs; [
     vim
@@ -75,12 +75,12 @@ in {
     lenovo-legion
     linuxKernel.packages.linux_zen.lenovo-legion-module
     linuxKernel.packages.linux_zen.turbostat
-    cpupower-gui 
+    cpupower-gui
 
     inxi
     htop
     pciutils
-    nushell
+    #nushell
     gimp
     wezterm
     gparted

@@ -4,7 +4,6 @@
   lib,
   ...
 }: {
-
   imports = [
     ./python.nix
   ];
@@ -51,7 +50,7 @@
         vm.redhat.java
         vm.redhat.vscode-xml
         vm.redhat.vscode-yaml
-     #   vm.rust-lang.rust-analyzer
+        #   vm.rust-lang.rust-analyzer
         vm.tamasfe.even-better-toml
         vm.yzhang.markdown-all-in-one
 
@@ -63,7 +62,7 @@
         vm.fill-labs.dependi
         vm.asvetliakov.vscode-neovim
 
-       # vm.github.github-vscode-theme
+        # vm.github.github-vscode-theme
       ];
       userSettings = {
         # Nix
@@ -72,7 +71,7 @@
         "nix.serverSettings" = {
           nixd = {
             formatting = {
-              command = [ "${pkgs.alejandra}/bin/alejandra" ];
+              command = ["${pkgs.alejandra}/bin/alejandra"];
             };
             options = {
               nixos = {
@@ -82,8 +81,8 @@
           };
         };
         # Rust
-      #  "rust-analyzer.server.path" = "${pkgs.rust-analyzer}/bin/rust-analyzer";
-     #   "rust-analyzer.check.command" = "clippy";
+        #  "rust-analyzer.server.path" = "${pkgs.rust-analyzer}/bin/rust-analyzer";
+        #   "rust-analyzer.check.command" = "clippy";
 
         # Python
         "python.analysis.autoImportCompletions" = true;
@@ -127,7 +126,6 @@
         "window.zoomLevel" = 1.25;
         "workbench.colorTheme" = "Abyss";
 
-
         # Other
         "direnv.restart.automatic" = true;
         "editor.formatOnSave" = true;
@@ -139,7 +137,7 @@
         "sortLines.filterBlankLines" = true;
         "workbench.startupEditor" = "none";
 
-        "zenMode.centerLayout" = false; 
+        "zenMode.centerLayout" = false;
         "zenMode.hideLineNumbers" = false;
       };
     };
