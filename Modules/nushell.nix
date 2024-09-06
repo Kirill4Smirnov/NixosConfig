@@ -1,14 +1,16 @@
 {
   pkgs,
   lib,
+  config,
   ...
 }: {
-  hm = {
+
+  home-manager.users.kenlog = {
     programs = {
       nushell = {
         enable = true;
         # The config.nu can be anywhere you want if you like to edit your Nushell with Nu
-        configFile.source = ../Modules/Nushell/config.nu;
+        #configFile.source = ../.config/nushell/config.nu;
         # for editing directly to config.nu
         extraConfig = ''
           let carapace_completer = {|spans|
@@ -32,9 +34,10 @@
           }
           $env.PATH = ($env.PATH |
           split row (char esep) |
-          prepend /home/myuser/.apps |
+          prepend /home/kenlog |
           append /usr/bin/env
           )
+          $env.EDITOR = vim
         '';
         shellAliases = {
           vi = "hx";

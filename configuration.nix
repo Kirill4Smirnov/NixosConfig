@@ -114,6 +114,7 @@ in {
     libreoffice
     planify
     texmaker
+    texliveTeTeX
 
     obsidian
     # zoom-us
