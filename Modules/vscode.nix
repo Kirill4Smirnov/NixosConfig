@@ -37,6 +37,7 @@
         vm.njpwerner.autodocstring
         vm.ms-python.autopep8
         vm.kevinrose.vsc-python-indent
+        vm.mathematic.vscode-latex
 
         # Jupyter
         pkgs.vscode-extensions.ms-toolsai.jupyter

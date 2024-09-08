@@ -115,6 +115,8 @@ in {
     planify
     texmaker
     texliveTeTeX
+    pipes-rs
+    cmatrix
 
     obsidian
     # zoom-us
