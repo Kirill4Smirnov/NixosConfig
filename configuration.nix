@@ -116,8 +116,7 @@ in {
     libreoffice
     planify
     texmaker
-    texliveMedium
-
+    texliveFull
     pipes-rs
     cmatrix
 
