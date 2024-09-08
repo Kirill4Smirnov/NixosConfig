@@ -5,9 +5,10 @@
   ...
 }: {
 
-  home-manager.users.kenlog = {
+  #home-manager.users.kenlog = {
+  hm = {
     programs = {
-      nushell = {
+      /*nushell = {
         enable = true;
         # The config.nu can be anywhere you want if you like to edit your Nushell with Nu
         #configFile.source = ../.config/nushell/config.nu;
@@ -43,8 +44,8 @@
           vi = "hx";
           vim = "hx";
           nano = "hx";
-        };
-      };
+        }; 
+      }; */
       carapace.enable = true;
       carapace.enableNushellIntegration = true;
 

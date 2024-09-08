@@ -80,12 +80,14 @@ in {
     inxi
     htop
     pciutils
-    #nushell
+    
+    nushell
+    
     gimp
     wezterm
     gparted
     yazi
-    gnome.gnome-tweaks
+    gnome-tweaks
     gnomeExtensions.vitals
     gnomeExtensions.hibernate-status-button
     gnomeExtensions.blur-my-shell
