@@ -28,7 +28,7 @@ in {
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
 
-  hardware.opengl = {
+  hardware.graphics = {
     enable = true;
     #driSupport = true;
     #driSupport32Bit = true;
@@ -122,7 +122,7 @@ in {
 
     obsidian
     # zoom-us
-    # mathematica
+    mathematica
   ];
 
   environment.variables.EDITOR = "vim";
