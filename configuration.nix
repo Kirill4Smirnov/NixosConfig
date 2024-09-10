@@ -80,9 +80,9 @@ in {
     inxi
     htop
     pciutils
-    
+
     nushell
-    
+
     gimp
     #wezterm
     gparted
