@@ -84,7 +84,7 @@ in {
     nushell
     
     gimp
-    wezterm
+    #wezterm
     gparted
     yazi
     gnome-tweaks

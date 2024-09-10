@@ -11,5 +11,6 @@
     ./firejail.nix
     ./brave.nix
     ./nushell.nix
+    ./wezterm.nix
   ];
 }
