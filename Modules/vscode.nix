@@ -32,7 +32,7 @@
         vm.ms-python.python
         vm.ms-python.vscode-pylance
         vm.ms-python.mypy-type-checker
-        vm.ms-python.black-formatter
+        # vm.ms-python.black-formatter
         vm.ms-python.isort
         vm.njpwerner.autodocstring
         vm.ms-python.autopep8
@@ -88,8 +88,9 @@
         # Python
         "python.analysis.autoImportCompletions" = true;
 
-        "black-formatter.path" = ["${pkgs.black}/bin/black"];
-        "python.formatting.provider" = "black";
+        # "black-formatter.path" = ["${pkgs.black}/bin/black"];
+        "python.formatting.provider" = "autopep8";
+        "python.editor.defaultFormatter" = "ms-python.autopep8";
 
         "python.languageServer" = "Pylance";
 
