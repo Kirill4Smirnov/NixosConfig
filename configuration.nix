@@ -119,6 +119,7 @@ in {
     texliveFull
     pipes-rs
     cmatrix
+    kdePackages.okular
 
     obsidian
     # zoom-us
