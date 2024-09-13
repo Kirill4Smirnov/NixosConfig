@@ -75,7 +75,6 @@ in {
     lenovo-legion
     linuxKernel.packages.linux_zen.lenovo-legion-module
     linuxKernel.packages.linux_zen.turbostat
-    cpupower-gui
 
     inxi
     htop
@@ -97,7 +96,6 @@ in {
     power-profiles-daemon
     telegram-desktop
     keepassxc
-    timeshift
     fzf
     git
     neofetch

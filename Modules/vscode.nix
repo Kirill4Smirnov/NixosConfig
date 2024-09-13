@@ -127,6 +127,7 @@
         # UI
         "window.zoomLevel" = 1.25;
         "workbench.colorTheme" = "Abyss";
+        "terminal.integrated.enableMultiLinePasteWarning" = false;
 
         # Other
         "direnv.restart.automatic" = true;
