@@ -118,6 +118,7 @@ in {
     pipes-rs
     cmatrix
     kdePackages.okular
+    btop
 
     obsidian
     # zoom-us
