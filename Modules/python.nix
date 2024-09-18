@@ -4,7 +4,7 @@
   ...
 }: {
   hm.home.packages = [
-    (pkgs.python3.withPackages
+    (pkgs.python31111111111111111111111.withPackages
       (ps:
         with ps; [
           ipympl

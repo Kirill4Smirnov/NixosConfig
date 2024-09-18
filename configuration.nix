@@ -118,6 +118,7 @@ in {
     pipes-rs
     cmatrix
     kdePackages.okular
+    private-gpt
 
     obsidian
     # zoom-us
