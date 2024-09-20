@@ -119,6 +119,7 @@ in {
     cmatrix
     kdePackages.okular
     btop
+    open-webui
 
     obsidian
     # zoom-us

@@ -20,6 +20,6 @@
           sympy
         ])
       )
-    pkgs.python311Packages.private-gpt
+   # pkgs.python311Packages.private-gpt
   ];
 }
