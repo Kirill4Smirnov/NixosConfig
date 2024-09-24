@@ -11,6 +11,10 @@
     acceleration = "cuda";
     # for checking ig ollama is running: http://127.0.0.1:11434/
   };
+  
+  services.open-webui = {
+    enable = true;
+  };
 
   environment.systemPackages = with pkgs; [
     oterm
