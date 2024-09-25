@@ -119,7 +119,7 @@ in {
     cmatrix
     kdePackages.okular
     btop
-    revolt-desktop
+    armcord
 
     obsidian
     # zoom-us
