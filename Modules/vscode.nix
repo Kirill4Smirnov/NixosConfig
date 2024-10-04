@@ -142,6 +142,7 @@
 
         "zenMode.centerLayout" = false;
         "zenMode.hideLineNumbers" = false;
+	"latex-workshop.view.pdf.invert" = 1;
       };
     };
   };
