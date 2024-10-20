@@ -119,7 +119,7 @@ in {
     cmatrix
     kdePackages.okular
     btop
-    armcord
+    legcord
 
     obsidian
     # zoom-us
