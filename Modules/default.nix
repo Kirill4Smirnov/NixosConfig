@@ -5,12 +5,13 @@
     ./Hardware/Gpu/nvidia.nix
     ./Hardware/Gpu/amd.nix
     ./obs-virt-cam.nix
-    ./ollama.nix
+    # ./ollama.nix
     ./firefox.nix
     ./vscode.nix
     ./firejail.nix
     ./brave.nix
     ./nushell.nix
     ./wezterm.nix
+    ./mathematica.nix
   ];
 }
