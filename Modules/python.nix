@@ -4,7 +4,8 @@
   ...
 }: {
   hm.home.packages = [
-    (pkgs.python3.withPackages
+    (
+      pkgs.python3.withPackages
       (ps:
         with ps; [
           ipympl
@@ -19,7 +20,7 @@
           numba
           sympy
         ])
-      )
-   # pkgs.python311Packages.private-gpt
+    )
+    # pkgs.python311Packages.private-gpt
   ];
 }

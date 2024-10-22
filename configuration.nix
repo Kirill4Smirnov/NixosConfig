@@ -122,7 +122,7 @@ in {
 
     obsidian
     # zoom-us
-    mathematica
+    # mathematica
   ];
 
   environment.variables.EDITOR = "vim";
