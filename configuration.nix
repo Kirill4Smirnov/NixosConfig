@@ -68,6 +68,12 @@ in {
   #boot.kernelModules = [ "lenovo-legion-module" ];
   boot.extraModulePackages = [config.boot.kernelPackages.lenovo-legion-module];
 
+  nix.gc = {
+    automatic = true;
+    dates = "weekly";
+    options = "--delete-older-than 30d";
+  };
+
   environment.systemPackages = with pkgs; [
     vim
     wget
