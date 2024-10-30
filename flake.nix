@@ -15,12 +15,15 @@
     nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
 
     nixpkgs-amnezia.url = "github:averyanalex/nixpkgs/amneziawg";
+
+    ayugram-desktop.url = "github:/ayugram-port/ayugram-desktop/release?submodules=1";
   };
 
   outputs = inputs @ {
     nixpkgs,
     home-manager,
     nixcfg,
+     ayugram-desktop,
     ...
   }: let
     system = "x86_64-linux";
