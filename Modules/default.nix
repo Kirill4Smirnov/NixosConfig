@@ -13,6 +13,5 @@
     ./nushell.nix
     ./wezterm.nix
     ./mathematica.nix
-    ./home.nix
   ];
 }

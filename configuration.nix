@@ -87,6 +87,7 @@ in {
     pciutils
 
     nushell
+    # inputs.ayugram-desktop.packages.${pkgs.system}.ayugram-desktop
 
     gimp
     #wezterm

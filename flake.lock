@@ -1,24 +1,5 @@
 {
   "nodes": {
-    "ayugram-desktop": {
-      "inputs": {
-        "nixpkgs": "nixpkgs"
-      },
-      "locked": {
-        "lastModified": 1730143163,
-        "narHash": "sha256-AQkTDx/NdygkXYXMCoobkmm7dCMa0brLGm7HsilDSMs=",
-        "owner": "ayugram-port",
-        "repo": "ayugram-desktop",
-        "rev": "fe9d7b06e2d03cc8e8ab13290794882d11aff1d7",
-        "type": "github"
-      },
-      "original": {
-        "owner": "ayugram-port",
-        "ref": "release",
-        "repo": "ayugram-desktop",
-        "type": "github"
-      }
-    },
     "flake-compat": {
       "flake": false,
       "locked": {
@@ -77,14 +58,14 @@
       "inputs": {
         "flake-compat": "flake-compat",
         "flake-utils": "flake-utils",
-        "nixpkgs": "nixpkgs_2"
+        "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1730252995,
-        "narHash": "sha256-/kFpSLC8kxSdL3rO4n38M9Fql+zovnw60X4Gpq7HnWo=",
+        "lastModified": 1730339415,
+        "narHash": "sha256-3dbUPDSAteNUvaMh3mh61FBQNhhT9n3XBQH2HK0C8+I=",
         "owner": "nix-community",
         "repo": "nix-vscode-extensions",
-        "rev": "238dc7efbe88c5ae226f849b73cd809f3ffbd001",
+        "rev": "bdda106fe8c2beda62338254783c562bfb5648a2",
         "type": "github"
       },
       "original": {
@@ -113,16 +94,16 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1729070438,
-        "narHash": "sha256-KOTTUfPkugH52avUvXGxvWy8ibKKj4genodIYUED+Kc=",
-        "owner": "nixos",
+        "lastModified": 1713805509,
+        "narHash": "sha256-YgSEan4CcrjivCNO5ZNzhg7/8ViLkZ4CB/GrGBVSudo=",
+        "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "5785b6bb5eaae44e627d541023034e1601455827",
+        "rev": "1e1dc66fe68972a76679644a5577828b6a7e8be4",
         "type": "github"
       },
       "original": {
-        "owner": "nixos",
-        "ref": "nixos-unstable",
+        "owner": "NixOS",
+        "ref": "nixpkgs-unstable",
         "repo": "nixpkgs",
         "type": "github"
       }
@@ -145,11 +126,11 @@
     },
     "nixpkgs-unstable": {
       "locked": {
-        "lastModified": 1729880355,
-        "narHash": "sha256-RP+OQ6koQQLX5nw0NmcDrzvGL8HDLnyXt/jHhL1jwjM=",
+        "lastModified": 1730200266,
+        "narHash": "sha256-l253w0XMT8nWHGXuXqyiIC/bMvh1VRszGXgdpQlfhvU=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "18536bf04cd71abd345f9579158841376fdd0c5a",
+        "rev": "807e9154dcb16384b1b765ebe9cd2bba2ac287fd",
         "type": "github"
       },
       "original": {
@@ -161,27 +142,11 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1713805509,
-        "narHash": "sha256-YgSEan4CcrjivCNO5ZNzhg7/8ViLkZ4CB/GrGBVSudo=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "1e1dc66fe68972a76679644a5577828b6a7e8be4",
-        "type": "github"
-      },
-      "original": {
-        "owner": "NixOS",
-        "ref": "nixpkgs-unstable",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
-    "nixpkgs_3": {
-      "locked": {
-        "lastModified": 1729880355,
-        "narHash": "sha256-RP+OQ6koQQLX5nw0NmcDrzvGL8HDLnyXt/jHhL1jwjM=",
+        "lastModified": 1730200266,
+        "narHash": "sha256-l253w0XMT8nWHGXuXqyiIC/bMvh1VRszGXgdpQlfhvU=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "18536bf04cd71abd345f9579158841376fdd0c5a",
+        "rev": "807e9154dcb16384b1b765ebe9cd2bba2ac287fd",
         "type": "github"
       },
       "original": {
@@ -193,11 +158,11 @@
     },
     "nur": {
       "locked": {
-        "lastModified": 1730289173,
-        "narHash": "sha256-wCHsVC13V4W8VczIPDZqssZe//ZZmjiGfe7q5KMAIHI=",
+        "lastModified": 1730364288,
+        "narHash": "sha256-q8iZMOxu5OjWDiNbE+LI83tXvxHUl2zrPKefojnksFE=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "b1d579b3d931139f32fa1f4c0a2dd50c0c07b75d",
+        "rev": "63bded559a2f06eb05835b8331be4de5a3b0ec5a",
         "type": "github"
       },
       "original": {
@@ -208,11 +173,10 @@
     },
     "root": {
       "inputs": {
-        "ayugram-desktop": "ayugram-desktop",
         "home-manager": "home-manager",
         "nix-vscode-extensions": "nix-vscode-extensions",
         "nixcfg": "nixcfg",
-        "nixpkgs": "nixpkgs_3",
+        "nixpkgs": "nixpkgs_2",
         "nixpkgs-amnezia": "nixpkgs-amnezia",
         "nixpkgs-unstable": "nixpkgs-unstable",
         "nur": "nur"

@@ -16,14 +16,14 @@
 
     nixpkgs-amnezia.url = "github:averyanalex/nixpkgs/amneziawg";
 
-    ayugram-desktop.url = "github:/ayugram-port/ayugram-desktop/release?submodules=1";
+    # ayugram-desktop.url = "github:/ayugram-port/ayugram-desktop/release?submodules=1";
   };
 
   outputs = inputs @ {
     nixpkgs,
     home-manager,
     nixcfg,
-     ayugram-desktop,
+     # ayugram-desktop,
     ...
   }: let
     system = "x86_64-linux";
