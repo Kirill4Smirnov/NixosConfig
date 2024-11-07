@@ -45,13 +45,13 @@ in {
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
-  hardware.pulseaudio.enable = false;
-  services.pipewire = {
-    enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
-    pulse.enable = true;
-  };
+  # hardware.pulseaudio.enable = false;
+  # services.pipewire = {
+  #   enable = true;
+  #   alsa.enable = true;
+  #   alsa.support32Bit = true;
+  #   pulse.enable = true;
+  # };
 
   # Enable touchpad support (enabled default in most desktopManager).
   services.libinput.enable = true;
@@ -63,7 +63,7 @@ in {
     shell = pkgs.nushell;
   };
 
-  nix.settings.experimental-features = ["nix-command" "flakes"];
+  # nix.settings.experimental-features = ["nix-command" "flakes"];
 
   #boot.kernelModules = [ "lenovo-legion-module" ];
   boot.extraModulePackages = [config.boot.kernelPackages.lenovo-legion-module];
@@ -74,13 +74,28 @@ in {
     options = "--delete-older-than 30d";
   };
 
+  programs.partition-manager.enable = true;
+
+  hm.programs.gnome-shell = {
+    enable = true;
+    extensions = with pkgs; [
+      {package = gnomeExtensions.vitals;}
+      {package = gnomeExtensions.hibernate-status-button;}
+      {package = gnomeExtensions.blur-my-shell;}
+    ];
+  };
+
+  # services.systemd
+
+  programs.nh = {
+    enable = true;
+    flake = "/home/kenlog/Configuration";
+  };
+
   environment.systemPackages = with pkgs; [
     vim
     wget
-    firefox
     lenovo-legion
-    linuxKernel.packages.linux_zen.lenovo-legion-module
-    linuxKernel.packages.linux_zen.turbostat
 
     inxi
     htop
@@ -91,13 +106,8 @@ in {
 
     gimp
     #wezterm
-    gparted
-    yazi
+    # gparted
     gnome-tweaks
-    gnomeExtensions.vitals
-    gnomeExtensions.hibernate-status-button
-    gnomeExtensions.blur-my-shell
-    gnome-extension-manager
     vimix-cursors
 
     power-profiles-daemon
@@ -110,8 +120,6 @@ in {
     alejandra
     rnote
     eza
-    rocmPackages.rocm-smi
-    rocmPackages.rocminfo
     bottles
     tribler
     ncdu

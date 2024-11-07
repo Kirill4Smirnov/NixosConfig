@@ -1,6 +1,5 @@
 {
   config,
-  lib,
   pkgs,
   inputs,
   ...
@@ -8,7 +7,7 @@
   nixpkgs.overlays = [
     (final: prev: {
       amnezia = import inputs.nixpkgs-amnezia {
-        system = "x86_64-linux";
+        system = prev.system;
         config = {allowUnfree = true;};
       };
     })

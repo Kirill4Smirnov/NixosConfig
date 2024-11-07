@@ -9,14 +9,13 @@
       extraConfig = ''
         local wezterm = require 'wezterm'
 
-         local config = wezterm.config_builder()
+        local config = wezterm.config_builder()
 
-         enable_wayland = false
-         config.front_end = "WebGpu"
-         config.xcursor_theme = "Vimix-cursors";
+        enable_wayland = false
+        config.front_end = "WebGpu"
+        config.xcursor_theme = "Vimix-cursors";
 
-         return config
-
+        return config
       '';
     };
   };

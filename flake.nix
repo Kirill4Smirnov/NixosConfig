@@ -23,7 +23,7 @@
     nixpkgs,
     home-manager,
     nixcfg,
-     # ayugram-desktop,
+    # ayugram-desktop,
     ...
   }: let
     system = "x86_64-linux";
@@ -43,6 +43,7 @@
           nixcfg = {
             username = "kenlog";
             desktop = true;
+            gnome.enable = true;
             inherit inputs;
           };
         })

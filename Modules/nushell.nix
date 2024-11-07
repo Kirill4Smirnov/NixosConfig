@@ -50,6 +50,11 @@
       carapace.enable = true;
       carapace.enableNushellIntegration = true;
 
+      yazi = {
+        enable = true;
+        enableNushellIntegration = true;
+      };
+
       starship = {
         enable = true;
         settings = {

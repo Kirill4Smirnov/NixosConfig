@@ -1,5 +1,5 @@
 {pkgs, ...}: {
-  environment.systemPackages = with pkgs; [
+  hardware.graphics.extraPackages = with pkgs; [
     rocmPackages.rocm-smi
     rocmPackages.rocminfo
     radeontop

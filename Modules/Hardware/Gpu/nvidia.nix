@@ -29,21 +29,20 @@
     # Experimental and only works on modern Nvidia GPUs (Turing or newer)
     powerManagement.finegrained = false;
 
-    /*
-         prime = {
-    #     offload = {
-    #       enable = true;
-    #       enableOffloadCmd = true;
-    #     };
-         sync.enable = true;
+    prime = {
+      offload = {
+        enable = true;
+        enableOffloadCmd = true;
+      };
+      # sync.enable = true;
 
-         # dedicated PGU
-         nvidiaBusId = "PCI:1:0:0";
+      # dedicated PGU
+      nvidiaBusId = "PCI:1:0:0";
 
-         # integrated (I hope this random Id will work)
-         amdgpuBusId = "PCI:6:0:0";
-       };
-    */
+      # integrated (I hope this random Id will work)
+      amdgpuBusId = "PCI:6:0:0";
+    };
+
     # Use the NVidia open source kernel module (not to be confused with the
     # independent third-party "nouveau" open source driver).
     # Support is limited to the Turing and later architectures. Full list of
