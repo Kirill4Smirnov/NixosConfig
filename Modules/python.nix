@@ -19,6 +19,7 @@
           tqdm
           numba
           sympy
+          scipy
         ])
     )
     # pkgs.python311Packages.private-gpt
