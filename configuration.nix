@@ -53,7 +53,6 @@ in {
   #  pulse.enable = true;
   #};
 
-
   # Enable touchpad support (enabled default in most desktopManager).
   services.libinput.enable = true;
 
@@ -134,6 +133,8 @@ in {
     cmatrix
     kdePackages.okular
     btop
+    vlc
+    p7zip
 
     obsidian
     # zoom-us
