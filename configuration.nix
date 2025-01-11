@@ -45,13 +45,14 @@ in {
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
-  # hardware.pulseaudio.enable = false;
-  # services.pipewire = {
-  #   enable = true;
+  services.pulseaudio.enable = lib.mkForce false;
+  #services.pipewire = {
+  #  enable = true;
   #   alsa.enable = true;
   #   alsa.support32Bit = true;
-  #   pulse.enable = true;
-  # };
+  #  pulse.enable = true;
+  #};
+
 
   # Enable touchpad support (enabled default in most desktopManager).
   services.libinput.enable = true;
@@ -125,7 +126,6 @@ in {
     ncdu
     dust
     neovim
-    affine
     libreoffice
     planify
     texmaker
