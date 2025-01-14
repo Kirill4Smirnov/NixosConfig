@@ -46,6 +46,8 @@
 
         # Other languages
         pkgs.vscode-extensions.ms-vscode.cpptools
+        pkgs.vscode-extensions.ms-vscode.cmake-tools
+        vm.twxs.cmake
         vm.jnoortheen.nix-ide
         vm.mechatroner.rainbow-csv
         vm.redhat.java
@@ -84,6 +86,11 @@
         # Rust
         #  "rust-analyzer.server.path" = "${pkgs.rust-analyzer}/bin/rust-analyzer";
         #   "rust-analyzer.check.command" = "clippy";
+
+        # CPP
+        #"C_Cpp.default.compilerPath" = "${pkgs.clang}/bin/clang";
+        "C_Cpp.default.compilerPath" = "/run/current-system/sw/bin/clang++";
+        "cmake.cmakePath" = "/run/current-system/sw/bin/cmake";
 
         # Python
         "python.analysis.autoImportCompletions" = true;

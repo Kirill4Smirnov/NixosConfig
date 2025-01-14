@@ -135,6 +135,11 @@ in {
     btop
     vlc
     p7zip
+    clang-tools
+    clang
+    cmake
+    ninja
+    gnumake
 
     obsidian
     # zoom-us
@@ -142,6 +147,7 @@ in {
   ];
 
   environment.variables.EDITOR = "vim";
+  environment.extraOutputsToInstall = ["dev"];
 
   system.stateVersion = "24.05"; # Did you read the comment?
 
