@@ -141,6 +141,7 @@ in {
     ninja
     gnumake
 
+    jetbrains.clion
     obsidian
     # zoom-us
     # mathematica
