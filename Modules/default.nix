@@ -12,7 +12,7 @@
     ./firejail.nix
     ./brave.nix
     ./nushell.nix
-    ./wezterm.nix
+    # ./wezterm.nix
     ./mathematica.nix
   ];
 }

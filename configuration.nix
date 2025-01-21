@@ -105,7 +105,7 @@ in {
     # inputs.ayugram-desktop.packages.${pkgs.system}.ayugram-desktop
 
     gimp
-    #wezterm
+    terminator
     # gparted
     gnome-tweaks
     vimix-cursors
