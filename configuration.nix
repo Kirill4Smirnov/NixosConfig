@@ -30,8 +30,6 @@ in {
 
   hardware.graphics = {
     enable = true;
-    #driSupport = true;
-    #driSupport32Bit = true;
   };
 
   nixpkgs.config.allowUnfree = true;
@@ -121,7 +119,7 @@ in {
     rnote
     eza
     bottles
-    tribler
+    # tribler
     ncdu
     dust
     neovim
@@ -140,6 +138,7 @@ in {
     cmake
     ninja
     gnumake
+    libGL
 
     jetbrains.clion
     obsidian
@@ -149,6 +148,10 @@ in {
 
   environment.variables.EDITOR = "vim";
   environment.extraOutputsToInstall = ["dev"];
+  environment.sessionVariables = {
+    "GDK_DISABLE" = "gles-api";
+    "LIBGL_DEBUG" = "verbose";
+  };
 
   system.stateVersion = "24.05"; # Did you read the comment?
 
