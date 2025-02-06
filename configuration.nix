@@ -73,6 +73,7 @@ in {
   };
 
   programs.partition-manager.enable = true;
+  services.flatpak.enable = true;
 
   hm.programs.gnome-shell = {
     enable = true;
