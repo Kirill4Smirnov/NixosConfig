@@ -20,6 +20,7 @@
           numba
           sympy
           scipy
+          statsmodels
         ])
     )
     # pkgs.python311Packages.private-gpt
