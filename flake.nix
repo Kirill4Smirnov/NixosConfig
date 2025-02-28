@@ -37,7 +37,7 @@
         inherit inputs;
       };
       modules = [
-        home-manager.nixosModules
+        home-manager.nixosModules.default
         nixcfg.nixosModules.default
         ({inputs, ...}: {
           nixcfg = {

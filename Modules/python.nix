@@ -21,6 +21,7 @@
           sympy
           scipy
           statsmodels
+          sklearn
         ])
     )
     # pkgs.python311Packages.private-gpt
