@@ -21,7 +21,7 @@
           sympy
           scipy
           statsmodels
-          sklearn-deap
+          scikit-learn
         ])
     )
     # pkgs.python311Packages.private-gpt
