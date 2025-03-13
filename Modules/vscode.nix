@@ -30,7 +30,7 @@
       in [
         # Python
         vm.ms-python.python
-        vm.ms-python.vscode-pylance
+        (vm.ms-python.vscode-pylance.override {meta.license = [];})
         vm.ms-python.mypy-type-checker
         # vm.ms-python.black-formatter
         vm.ms-python.isort
@@ -62,7 +62,7 @@
         vm.mkhl.direnv
         vm.stkb.rewrap
         vm.tyriar.sort-lines
-        vm.fill-labs.dependi
+        (vm.fill-labs.dependi.override {meta.license = [];})
         vm.asvetliakov.vscode-neovim
 
         # vm.github.github-vscode-theme
