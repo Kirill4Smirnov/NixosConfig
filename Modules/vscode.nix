@@ -22,10 +22,10 @@
       package = pkgs.vscode;
 
       mutableExtensionsDir = false;
-      enableUpdateCheck = false;
-      enableExtensionUpdateCheck = false;
+      profiles.default.enableUpdateCheck = false;
+      profiles.default.enableExtensionUpdateCheck = false;
 
-      extensions = let
+      profiles.default.extensions = let
         vm = inputs.nix-vscode-extensions.extensions.${pkgs.hostPlatform.system}.vscode-marketplace;
       in [
         # Python
@@ -67,7 +67,7 @@
 
         # vm.github.github-vscode-theme
       ];
-      userSettings = {
+      profiles.default.userSettings = {
         # Nix
         "nix.enableLanguageServer" = true;
         "nix.serverPath" = lib.getExe pkgs.nixd;
