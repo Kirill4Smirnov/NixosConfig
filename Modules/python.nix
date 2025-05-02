@@ -22,6 +22,7 @@
           scipy
           statsmodels
           scikit-learn
+          plotly
         ])
     )
     # pkgs.python311Packages.private-gpt

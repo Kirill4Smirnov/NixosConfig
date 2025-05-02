@@ -140,6 +140,7 @@ in {
     ninja
     gnumake
     libGL
+    android-tools
 
     jetbrains.clion
     obsidian
