@@ -125,7 +125,7 @@ in {
     dust
     neovim
     libreoffice
-    planify
+    # planify
     texmaker
     texliveFull
     pipes-rs
@@ -142,10 +142,13 @@ in {
     libGL
     android-tools
 
+    code-cursor
     jetbrains.clion
     obsidian
     # zoom-us
     # mathematica
+
+    flatpak
   ];
 
   environment.variables.EDITOR = "vim";
