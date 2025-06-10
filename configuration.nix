@@ -25,8 +25,8 @@ in {
   #services.displayManager.sddm.wayland.enable = true;
   #services.desktopManager.plasma6.enable = true;
 
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
+  services.displayManager.gdm.enable = true;
+  services.desktopManager.gnome.enable = true;
 
   hardware.graphics = {
     enable = true;
@@ -141,6 +141,7 @@ in {
     gnumake
     libGL
     android-tools
+    uv
 
     code-cursor
     jetbrains.clion
@@ -150,6 +151,8 @@ in {
 
     flatpak
   ];
+
+  programs.nix-ld.enable = true;
 
   environment.variables.EDITOR = "vim";
   environment.extraOutputsToInstall = ["dev"];
