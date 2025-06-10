@@ -4,9 +4,7 @@
   pkgs,
   inputs,
   ...
-}: let
-  kver = config.boot.kernelPackages.kernel.version; # variable not used at the moment
-in {
+}: {
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -21,10 +19,6 @@ in {
   time.timeZone = "Europe/Moscow";
 
   services.xserver.enable = true;
-
-  #services.displayManager.sddm.wayland.enable = true;
-  #services.desktopManager.plasma6.enable = true;
-
   services.displayManager.gdm.enable = true;
   services.desktopManager.gnome.enable = true;
 
@@ -33,13 +27,7 @@ in {
   };
 
   nixpkgs.config.allowUnfree = true;
-  # this trick with predicate wasn't working (the packages weren't been installed)
-  #nixpkgs.config.allowUnfreePredicate = pkg:
-  #  builtins.elem (lib.getName pkg) [
-  #    "obsidian"
-  #    "zoom-us"
-  #  ];
-
+  
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
