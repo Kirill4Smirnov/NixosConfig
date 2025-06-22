@@ -130,6 +130,7 @@
     libGL
     android-tools
     uv
+    ayugram-desktop
 
     code-cursor
     jetbrains.clion

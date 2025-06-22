@@ -8,15 +8,13 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nixcfg.url = "github:averyanalex/nixcfg";
+    nixcfg.url = "github:kirill4smirnov/nixcfg";
 
     nur.url = "github:nix-community/NUR";
 
     nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
 
     nixpkgs-amnezia.url = "github:averyanalex/nixpkgs/amneziawg";
-
-    # ayugram-desktop.url = "github:/ayugram-port/ayugram-desktop/release?submodules=1";
   };
 
   outputs = inputs @ {
