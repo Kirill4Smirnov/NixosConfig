@@ -21,7 +21,6 @@
     nixpkgs,
     home-manager,
     nixcfg,
-    # ayugram-desktop,
     ...
   }: let
     system = "x86_64-linux";
@@ -30,8 +29,6 @@
     nixosConfigurations.KenNix = nixpkgs.lib.nixosSystem {
       system = system;
       specialArgs = {
-        #    username = "kenlog";
-        #    hyprlandConfig = "laptop";
         inherit inputs;
       };
       modules = [

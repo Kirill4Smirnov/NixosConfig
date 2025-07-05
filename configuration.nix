@@ -42,10 +42,11 @@
   # Enable touchpad support (enabled default in most desktopManager).
   services.libinput.enable = true;
 
-  # Define a user account. Don't forget to set a password with ‘passwd’.
+  virtualisation.docker.enable = true;
+
   users.users.kenlog = {
     isNormalUser = true;
-    extraGroups = ["wheel" "input" "networkmanager"]; # Enable ‘sudo’ for the user.
+    extraGroups = ["wheel" "input" "networkmanager" "docker"];
     shell = pkgs.nushell;
   };
 
