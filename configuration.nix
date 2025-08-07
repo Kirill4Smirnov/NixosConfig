@@ -9,7 +9,7 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  boot.initrd.luks.devices."luks-47226b1a-1d7e-49d3-9ed0-d8e2fd63af57".device = "/dev/disk/by-uuid/47226b1a-1d7e-49d3-9ed0-d8e2fd63af57";
+  boot.initrd.luks.devices."luks-486bb194-339e-47d8-bb1e-0b9b1aaf2a32".device = "/dev/disk/by-uuid/486bb194-339e-47d8-bb1e-0b9b1aaf2a32";
 
   boot.loader.systemd-boot.memtest86.enable = true;
 
@@ -53,7 +53,7 @@
   # nix.settings.experimental-features = ["nix-command" "flakes"];
 
   #boot.kernelModules = [ "lenovo-legion-module" ];
-  boot.extraModulePackages = [config.boot.kernelPackages.lenovo-legion-module];
+  #boot.extraModulePackages = [config.boot.kernelPackages.lenovo-legion-module];
 
   nix.gc = {
     automatic = true;
@@ -62,7 +62,7 @@
   };
 
   programs.partition-manager.enable = true;
-  services.flatpak.enable = true;
+  # services.flatpak.enable = true;
 
   hm.programs.gnome-shell = {
     enable = true;
@@ -83,7 +83,7 @@
   environment.systemPackages = with pkgs; [
     vim
     wget
-    lenovo-legion
+   # lenovo-legion
 
     inxi
     htop
@@ -99,7 +99,7 @@
     vimix-cursors
 
     power-profiles-daemon
-    telegram-desktop
+    # telegram-desktop
     keepassxc
     fzf
     git
@@ -134,12 +134,10 @@
     ayugram-desktop
 
     code-cursor
-    jetbrains.clion
+    # jetbrains.clion
     obsidian
     # zoom-us
     # mathematica
-
-    flatpak
   ];
 
   programs.nix-ld.enable = true;
@@ -153,5 +151,4 @@
 
   system.stateVersion = "24.05"; # Did you read the comment?
 
-  #boot.resumeDevice = "/dev/mapper/crypted";
 }

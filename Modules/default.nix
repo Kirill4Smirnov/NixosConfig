@@ -1,10 +1,10 @@
 {inputs, ...}: {
   imports = [
     ./Hardware/hardware-configuration.nix
-    ./amnezia.nix
+   # ./amnezia.nix
     # ./Hardware/Gpu/nvidia.nix
-    ./Hardware/Gpu/nonvidia.nix
-    ./Hardware/Gpu/amd.nix
+    # ./Hardware/Gpu/nonvidia.nix
+    # ./Hardware/Gpu/amd.nix
     ./obs-virt-cam.nix
     # ./ollama.nix
     ./firefox.nix
@@ -12,7 +12,7 @@
     ./firejail.nix
     ./brave.nix
     ./nushell.nix
-    # ./wezterm.nix
-    ./mathematica.nix
+    ./wezterm.nix
+    # ./mathematica.nix
   ];
 }
