@@ -81,22 +81,21 @@
   };
 
   environment.systemPackages = with pkgs; [
+    amnezia-vpn
     vim
     wget
-   # lenovo-legion
 
     inxi
     htop
     pciutils
 
-    nushell
-    # inputs.ayugram-desktop.packages.${pkgs.system}.ayugram-desktop
+    # nushell
 
     gimp
-    terminator
+    # terminator
     # gparted
     gnome-tweaks
-    vimix-cursors
+    # vimix-cursors
 
     power-profiles-daemon
     # telegram-desktop
@@ -108,14 +107,14 @@
     alejandra
     rnote
     eza
-    bottles
-    # tribler
+    # bottles
+    tribler
     ncdu
     dust
     neovim
     libreoffice
     # planify
-    texmaker
+    # texmaker
     texliveFull
     pipes-rs
     cmatrix
@@ -131,13 +130,16 @@
     libGL
     android-tools
     uv
+    unrar
     ayugram-desktop
 
-    code-cursor
+    # code-cursor
     # jetbrains.clion
     obsidian
     # zoom-us
     # mathematica
+
+    gnome-themes-extra
   ];
 
   programs.nix-ld.enable = true;

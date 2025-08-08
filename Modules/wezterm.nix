@@ -11,9 +11,8 @@
 
         local config = wezterm.config_builder()
 
-        enable_wayland = false
+        enable_wayland = true
         config.front_end = "WebGpu"
-        config.xcursor_theme = "Vimix-cursors";
 
         return config
       '';

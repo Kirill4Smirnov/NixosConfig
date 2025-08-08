@@ -41,12 +41,11 @@
           $env.EDITOR = vim
         '';
         shellAliases = {
-          vi = "hx";
-          vim = "hx";
-          nano = "hx";
+          up = "neofetch";
         };
       };
       */
+      
       carapace.enable = true;
       carapace.enableNushellIntegration = true;
 
