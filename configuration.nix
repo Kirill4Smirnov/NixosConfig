@@ -95,7 +95,6 @@
     # terminator
     # gparted
     gnome-tweaks
-    # vimix-cursors
 
     power-profiles-daemon
     # telegram-desktop

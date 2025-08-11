@@ -13,6 +13,6 @@
     ./brave.nix
     ./nushell.nix
     ./wezterm.nix
-    # ./mathematica.nix
+    ./mathematica.nix
   ];
 }
