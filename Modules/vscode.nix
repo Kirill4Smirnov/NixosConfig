@@ -63,7 +63,7 @@
         vm.stkb.rewrap
         vm.tyriar.sort-lines
         (vm.fill-labs.dependi.override {meta.license = [];})
-        vm.asvetliakov.vscode-neovim
+        # vm.asvetliakov.vscode-neovim
 
         # vm.github.github-vscode-theme
       ];
