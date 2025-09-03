@@ -27,6 +27,9 @@
   };
 
   nixpkgs.config.allowUnfree = true;
+  nixpkgs.config.permittedInsecurePackages = [
+    "qtwebengine-5.15.19"
+  ];
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
@@ -151,5 +154,4 @@
   };
 
   system.stateVersion = "24.05"; # Did you read the comment?
-
 }
