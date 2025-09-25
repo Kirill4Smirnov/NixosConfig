@@ -45,6 +45,7 @@
         vm.ms-toolsai.datawrangler
 
         # Other languages
+        vm.golang.go
         pkgs.vscode-extensions.ms-vscode.cpptools
         pkgs.vscode-extensions.ms-vscode.cmake-tools
         vm.twxs.cmake

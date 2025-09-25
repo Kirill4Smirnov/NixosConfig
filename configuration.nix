@@ -91,8 +91,9 @@
     inxi
     htop
     pciutils
-
-    # nushell
+    go
+    golangci-lint
+    rustup
 
     gimp
     # terminator
@@ -110,7 +111,7 @@
     rnote
     eza
     # bottles
-    tribler
+    # tribler # doesn't have a desktop entry, starting from terminal gives a web interface
     ncdu
     dust
     neovim
@@ -134,6 +135,7 @@
     uv
     unrar
     ayugram-desktop
+    endeavour
 
     # code-cursor
     # jetbrains.clion
