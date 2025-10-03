@@ -9,5 +9,6 @@
     ./nushell.nix
     ./wezterm.nix
     ./mathematica.nix
+    ./open-webui.nix
   ];
 }

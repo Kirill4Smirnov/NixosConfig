@@ -53,11 +53,6 @@
     shell = pkgs.nushell;
   };
 
-  # nix.settings.experimental-features = ["nix-command" "flakes"];
-
-  #boot.kernelModules = [ "lenovo-legion-module" ];
-  #boot.extraModulePackages = [config.boot.kernelPackages.lenovo-legion-module];
-
   nix.gc = {
     automatic = true;
     dates = "weekly";
@@ -75,8 +70,6 @@
       {package = gnomeExtensions.blur-my-shell;}
     ];
   };
-
-  # services.systemd
 
   programs.nh = {
     enable = true;
@@ -136,6 +129,8 @@
     unrar
     ayugram-desktop
     endeavour
+
+    code-cursor
 
     # code-cursor
     # jetbrains.clion

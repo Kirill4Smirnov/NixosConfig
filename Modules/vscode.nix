@@ -9,10 +9,6 @@
   ];
 
   hm = {
-    # home.file.".vscode/argv.json".text = builtins.toJSON {
-    #   enable-crash-reporter = false;
-    #   password-store = "gnome-libsecret";
-    # };
     home.packages = with pkgs; [
       poetry
     ];
@@ -92,6 +88,21 @@
         #"C_Cpp.default.compilerPath" = "${pkgs.clang}/bin/clang";
         "C_Cpp.default.compilerPath" = "/run/current-system/sw/bin/clang++";
         "cmake.cmakePath" = "/run/current-system/sw/bin/cmake";
+
+        #Golang
+        "go.lintTool" = "golangci-lint";
+        "go.lintFlags" = [
+          "--path-mode=abs"
+          "--fast-only"
+        ];
+        "go.formatTool" = "custom";
+        "go.alternateTools" = {
+          "customFormatter" = "golangci-lint";
+        };
+        "go.formatFlags" = [
+          "fmt"
+          "--stdin"
+        ];
 
         # Python
         "python.analysis.autoImportCompletions" = true;
