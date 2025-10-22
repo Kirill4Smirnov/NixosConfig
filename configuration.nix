@@ -11,7 +11,7 @@
 
   boot.initrd.luks.devices."luks-486bb194-339e-47d8-bb1e-0b9b1aaf2a32".device = "/dev/disk/by-uuid/486bb194-339e-47d8-bb1e-0b9b1aaf2a32";
 
-  boot.loader.systemd-boot.memtest86.enable = true;
+  #  boot.loader.systemd-boot.memtest86.enable = true;
 
   networking.hostName = "KenNix"; # Define your hostname.
   networking.networkmanager.enable = true; # Easiest to use and most distros use this by default.
