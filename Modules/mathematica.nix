@@ -2,7 +2,10 @@
   environment.systemPackages = with pkgs; [
     (mathematica.override {
       version = "14.0.0";
-      /*source = pkgs.requireFile {
+      webdoc = false;
+
+      /*
+        source = pkgs.requireFile {
         name = "Mathematica_14.0.0_BNDL_LINUX.sh";
         # Get this hash via a command similar to this:
         # nix-store --query --hash \

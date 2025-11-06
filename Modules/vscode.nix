@@ -22,7 +22,7 @@
       profiles.default.enableExtensionUpdateCheck = false;
 
       profiles.default.extensions = let
-        vm = inputs.nix-vscode-extensions.extensions.${pkgs.hostPlatform.system}.vscode-marketplace;
+        vm = inputs.nix-vscode-extensions.extensions.${pkgs.system}.vscode-marketplace;
       in [
         # Python
         vm.ms-python.python
@@ -45,6 +45,7 @@
         pkgs.vscode-extensions.ms-vscode.cpptools
         pkgs.vscode-extensions.ms-vscode.cmake-tools
         vm.twxs.cmake
+        vm."13xforever".language-x86-64-assembly
         vm.jnoortheen.nix-ide
         vm.mechatroner.rainbow-csv
         vm.redhat.java

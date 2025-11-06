@@ -14,7 +14,7 @@
   #  boot.loader.systemd-boot.memtest86.enable = true;
 
   networking.hostName = "KenNix"; # Define your hostname.
-  networking.networkmanager.enable = true; # Easiest to use and most distros use this by default.
+  networking.networkmanager.enable = true;
 
   time.timeZone = "Europe/Moscow";
 
