@@ -45,7 +45,13 @@
   # Enable touchpad support (enabled default in most desktopManager).
   services.libinput.enable = true;
 
-  virtualisation.docker.enable = true;
+  virtualisation.docker = {
+    enable = true;
+    enableOnBoot = true;
+    daemon.settings = {
+      "hosts" = ["unix:///var/run/docker.sock"];
+    };
+  };
 
   users.users.kenlog = {
     isNormalUser = true;
@@ -131,8 +137,8 @@
     endeavour
 
     code-cursor
+    docker-compose
 
-    # code-cursor
     # jetbrains.clion
     obsidian
     # zoom-us
