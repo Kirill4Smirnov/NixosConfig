@@ -11,15 +11,16 @@
 
   boot.initrd.luks.devices."luks-486bb194-339e-47d8-bb1e-0b9b1aaf2a32".device = "/dev/disk/by-uuid/486bb194-339e-47d8-bb1e-0b9b1aaf2a32";
 
-  #  boot.loader.systemd-boot.memtest86.enable = true;
-
   networking.hostName = "KenNix"; # Define your hostname.
   networking.networkmanager.enable = true;
 
   time.timeZone = "Europe/Moscow";
 
-  services.xserver.enable = true;
-  services.displayManager.gdm.enable = true;
+  services.displayManager = {
+    gdm.enable = true;
+    autoLogin.enable = true;
+    autoLogin.user = "kenlog";
+  };
   services.desktopManager.gnome.enable = true;
 
   hardware.graphics = {

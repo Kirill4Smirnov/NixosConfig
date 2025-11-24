@@ -13,8 +13,6 @@
     nur.url = "github:nix-community/NUR";
 
     nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
-
-    nixpkgs-amnezia.url = "github:averyanalex/nixpkgs/amneziawg";
   };
 
   outputs = inputs @ {
@@ -24,7 +22,6 @@
     ...
   }: let
     system = "x86_64-linux";
-    pkgs = nixpkgs.legacyPackages.${system};
   in {
     nixosConfigurations.KenNix = nixpkgs.lib.nixosSystem {
       system = system;
