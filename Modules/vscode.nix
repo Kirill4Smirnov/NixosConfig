@@ -42,8 +42,9 @@
 
         # Other languages
         vm.golang.go
-        pkgs.vscode-extensions.ms-vscode.cpptools
+       # pkgs.vscode-extensions.ms-vscode.cpptools
         pkgs.vscode-extensions.ms-vscode.cmake-tools
+        pkgs.vscode-extensions.llvm-vs-code-extensions.vscode-clangd
         vm.twxs.cmake
         vm."13xforever".language-x86-64-assembly
         vm.jnoortheen.nix-ide
