@@ -41,6 +41,19 @@
         "type": "github"
       }
     },
+    "mathematica-installer": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1729628284,
+        "narHash": "sha256-voSRWQH+UFJdbYbDnP8eyCHBV6x9lJfovg+r4PbVuWY=",
+        "path": "/home/kenlog/Mathematica_14.0.0_BNDL_LINUX.sh",
+        "type": "path"
+      },
+      "original": {
+        "path": "/home/kenlog/Mathematica_14.0.0_BNDL_LINUX.sh",
+        "type": "path"
+      }
+    },
     "nix-vscode-extensions": {
       "inputs": {
         "nixpkgs": "nixpkgs"
@@ -163,6 +176,7 @@
     "root": {
       "inputs": {
         "home-manager": "home-manager",
+        "mathematica-installer": "mathematica-installer",
         "nix-vscode-extensions": "nix-vscode-extensions",
         "nixcfg": "nixcfg",
         "nixpkgs": "nixpkgs_2",

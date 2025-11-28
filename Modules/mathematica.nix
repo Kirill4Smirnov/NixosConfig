@@ -1,9 +1,14 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  inputs,
+  ...
+}: {
   environment.systemPackages = with pkgs; [
     (mathematica.override {
       version = "14.0.0";
       webdoc = false;
 
+      source = inputs.mathematica-installer;
       /*
         source = pkgs.requireFile {
         name = "Mathematica_14.0.0_BNDL_LINUX.sh";
