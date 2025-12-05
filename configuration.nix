@@ -99,6 +99,7 @@
     # terminator
     # gparted
     gnome-tweaks
+    gnome-themes-extra
 
     power-profiles-daemon
     # telegram-desktop
@@ -142,10 +143,6 @@
 
     # jetbrains.clion
     obsidian
-    # zoom-us
-    # mathematica
-
-    gnome-themes-extra
   ];
 
   programs.nix-ld.enable = true;
