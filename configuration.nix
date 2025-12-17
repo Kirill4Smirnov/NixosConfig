@@ -73,7 +73,8 @@
     enable = true;
     extensions = with pkgs; [
       {package = gnomeExtensions.vitals;}
-      {package = gnomeExtensions.hibernate-status-button;}
+      # {package = gnomeExtensions.hibernate-status-button;}
+      {package = gnomeExtensions.power-off-options;}
       {package = gnomeExtensions.blur-my-shell;}
     ];
   };
