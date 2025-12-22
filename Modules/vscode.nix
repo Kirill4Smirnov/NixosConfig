@@ -38,7 +38,7 @@
         # Jupyter
         pkgs.vscode-extensions.ms-toolsai.jupyter
         pkgs.vscode-extensions.ms-toolsai.jupyter-renderers
-        vm.ms-toolsai.datawrangler
+        # vm.ms-toolsai.datawrangler
 
         # Other languages
         vm.golang.go
