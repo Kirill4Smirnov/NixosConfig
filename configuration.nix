@@ -144,6 +144,7 @@
 
     # jetbrains.clion
     obsidian
+    flclash
   ];
 
   programs.nix-ld.enable = true;
