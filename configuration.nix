@@ -4,59 +4,77 @@
   pkgs,
   inputs,
   ...
-}: {
-  # Use the systemd-boot EFI boot loader.
+}: let
+  username = "kenlog";
+  hostName = "KenNix";
+  flakePath = "/home/kenlog/Configuration";
+in {
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
   boot.initrd.luks.devices."luks-486bb194-339e-47d8-bb1e-0b9b1aaf2a32".device = "/dev/disk/by-uuid/486bb194-339e-47d8-bb1e-0b9b1aaf2a32";
 
-  networking.hostName = "KenNix"; # Define your hostname.
+  networking.hostName = hostName;
   networking.networkmanager.enable = true;
 
   time.timeZone = "Europe/Moscow";
 
-  services.displayManager = {
-    gdm.enable = true;
-    autoLogin.enable = true;
-    autoLogin.user = "kenlog";
-  };
-  services.desktopManager.gnome.enable = true;
-
-  hardware.graphics = {
-    enable = true;
-  };
-
-  nixpkgs.config.allowUnfree = true;
-  nixpkgs.config.permittedInsecurePackages = [
-    "qtwebengine-5.15.19"
+  i18n.extraLocales = [
+    "en_US.UTF-8/UTF-8"
+    "ru_RU.UTF-8/UTF-8"
+    "en_GB.UTF-8/UTF-8"
   ];
 
-  # Enable CUPS to print documents.
-  services.printing.enable = true;
+  hardware.graphics.enable = true;
 
-  services.pulseaudio.enable = lib.mkForce false;
-  #services.pipewire = {
-  #  enable = true;
-  #   alsa.enable = true;
-  #   alsa.support32Bit = true;
-  #  pulse.enable = true;
-  #};
+  nixpkgs.config = {
+    allowUnfree = true;
+    permittedInsecurePackages = [
+      "qtwebengine-5.15.19"
+    ];
+  };
 
-  # Enable touchpad support (enabled default in most desktopManager).
-  services.libinput.enable = true;
+  services = {
+    displayManager = {
+      gdm.enable = true;
+      autoLogin = {
+        enable = true;
+        user = username;
+      };
+    };
+
+    desktopManager.gnome.enable = true;
+
+    printing.enable = true;
+
+    libinput.enable = true;
+
+    pulseaudio.enable = lib.mkForce false;
+
+    # pipewire = {
+    #   enable = true;
+    #   alsa.enable = true;
+    #   alsa.support32Bit = true;
+    #   pulse.enable = true;
+    # };
+  };
 
   virtualisation.docker = {
     enable = true;
     enableOnBoot = true;
-    daemon.settings = {
-      "hosts" = ["unix:///var/run/docker.sock"];
-    };
+    daemon.settings.hosts = [
+      "unix:///var/run/docker.sock"
+    ];
   };
 
-  users.users.kenlog = {
+  users.users.${username} = {
     isNormalUser = true;
-    extraGroups = ["wheel" "input" "networkmanager" "docker"];
+    extraGroups = [
+      "wheel"
+      "input"
+      "networkmanager"
+      "docker"
+    ];
     shell = pkgs.nushell;
   };
 
@@ -67,94 +85,108 @@
   };
 
   programs.partition-manager.enable = true;
-  # services.flatpak.enable = true;
-
-  hm.programs.gnome-shell = {
-    enable = true;
-    extensions = with pkgs; [
-      {package = gnomeExtensions.vitals;}
-      # {package = gnomeExtensions.hibernate-status-button;}
-      {package = gnomeExtensions.power-off-options;}
-      {package = gnomeExtensions.blur-my-shell;}
-    ];
-  };
+  programs.nix-ld.enable = true;
 
   programs.nh = {
     enable = true;
-    flake = "/home/kenlog/Configuration";
+    flake = flakePath;
   };
 
-  environment.systemPackages = with pkgs; [
-    amnezia-vpn
-    vim
-    wget
+  hm.programs.gnome-shell = {
+    enable = true;
+    extensions = with pkgs.gnomeExtensions; [
+      {package = vitals;}
+      # {package = hibernate-status-button;}
+      {package = power-off-options;}
+      {package = blur-my-shell;}
+    ];
+  };
 
-    inxi
-    htop
-    pciutils
-    go
-    golangci-lint
-    rustup
+  environment = {
+    systemPackages = with pkgs; let
+      base = [
+        amnezia-vpn
+        vim
+        wget
+      ];
 
-    gimp
-    # terminator
-    # gparted
-    gnome-tweaks
-    gnome-themes-extra
+      systemTools = [
+        inxi
+        htop
+        pciutils
+      ];
 
-    power-profiles-daemon
-    # telegram-desktop
-    keepassxc
-    fzf
-    git
-    neofetch
-    obs-studio
-    alejandra
-    rnote
-    eza
-    # bottles
-    # tribler # doesn't have a desktop entry, starting from terminal gives a web interface
-    ncdu
-    dust
-    neovim
-    libreoffice
-    # planify
-    # texmaker
-    texliveFull
-    pipes-rs
-    cmatrix
-    kdePackages.okular
-    btop
-    vlc
-    p7zip
-    clang-tools
-    clang
-    cmake
-    ninja
-    gnumake
-    libGL
-    android-tools
-    uv
-    unrar
-    ayugram-desktop
-    endeavour
+      devTools = [
+        go
+        golangci-lint
+        rustup
+        clang-tools
+        clang
+        cmake
+        ninja
+        gnumake
+        android-tools
+        uv
+      ];
 
-    code-cursor
-    docker-compose
+      desktopApps = [
+        gimp
+        # terminator
+        # gparted
+        gnome-tweaks
+        gnome-themes-extra
+        power-profiles-daemon
+        # telegram-desktop
+        keepassxc
+        obs-studio
+        rnote
+        libreoffice
+        texliveFull
+        kdePackages.okular
+        vlc
+        ayugram-desktop
+        endeavour
+        code-cursor
+        docker-compose
+        # jetbrains.clion
+        obsidian
+        flclash
+      ];
 
-    # jetbrains.clion
-    obsidian
-    flclash
-    asciinema
-  ];
+      cliNice = [
+        fzf
+        git
+        neofetch
+        alejandra
+        eza
+        # bottles
+        # tribler # doesn't have a desktop entry, starting from terminal gives a web interface
+        ncdu
+        dust
+        neovim
+        pipes-rs
+        cmatrix
+        btop
+        p7zip
+        libGL
+        unrar
+        asciinema
+      ];
+    in
+      base
+      ++ systemTools
+      ++ devTools
+      ++ desktopApps
+      ++ cliNice;
 
-  programs.nix-ld.enable = true;
-
-  environment.variables.EDITOR = "vim";
-  environment.extraOutputsToInstall = ["dev"];
-  environment.sessionVariables = {
-    "GDK_DISABLE" = "gles-api";
-    "LIBGL_DEBUG" = "verbose";
+    variables.EDITOR = "nvim";
+    extraOutputsToInstall = [
+      "dev"
+    ];
+    sessionVariables = {
+      GDK_DISABLE = "gles-api";
+      LIBGL_DEBUG = "verbose";
+    };
   };
 
   system.stateVersion = "24.05"; # Did you read the comment?
