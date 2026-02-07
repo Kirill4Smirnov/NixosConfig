@@ -52,7 +52,7 @@
         vm.redhat.java
         vm.redhat.vscode-xml
         vm.redhat.vscode-yaml
-        #   vm.rust-lang.rust-analyzer
+        vm.rust-lang.rust-analyzer
         vm.tamasfe.even-better-toml
         vm.yzhang.markdown-all-in-one
 
@@ -83,8 +83,8 @@
           };
         };
         # Rust
-        #  "rust-analyzer.server.path" = "${pkgs.rust-analyzer}/bin/rust-analyzer";
-        #   "rust-analyzer.check.command" = "clippy";
+        "rust-analyzer.server.path" = "${pkgs.rust-analyzer}/bin/rust-analyzer";
+        "rust-analyzer.check.command" = "clippy";
 
         # CPP
         #"C_Cpp.default.compilerPath" = "${pkgs.clang}/bin/clang";
