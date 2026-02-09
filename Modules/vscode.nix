@@ -122,8 +122,12 @@
         };
         # "mypy-type-checker.path" = [ "${pkgs.mypy}/bin/mypy" ];
 
-        "python.poetryPath" = "${pkgs.poetry}/bin/poetry";
-        "python.venvPath" = "~/.cache/pypoetry/virtualenvs";
+        "python.defaultInterpreterPath" = "\${workspaceFolder}/.venv/bin/python";
+        "python.terminal.activateEnvironment" = true;
+        "python.venvFolders" = [
+          ".venv"
+        ];
+        "jupyter.jupyterServerType" = "local";
 
         "isort.path" = ["${pkgs.python3Packages.isort}/bin/isort"];
 

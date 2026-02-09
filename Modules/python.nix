@@ -25,6 +25,5 @@
           plotly
         ])
     )
-    # pkgs.python311Packages.private-gpt
   ];
 }
