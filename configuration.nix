@@ -137,6 +137,8 @@ in {
         gnome-themes-extra
         power-profiles-daemon
         # telegram-desktop
+        ayugram-desktop
+        signal-desktop
         keepassxc
         obs-studio
         rnote
@@ -144,7 +146,6 @@ in {
         texliveFull
         kdePackages.okular
         vlc
-        ayugram-desktop
         endeavour
         code-cursor
         docker-compose
