@@ -152,6 +152,7 @@ in {
         # jetbrains.clion
         obsidian
         flclash
+        tauon
       ];
 
       cliNice = [
