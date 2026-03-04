@@ -9,6 +9,8 @@
           decentraleyes
           ublock-origin
           vimium
+          kagi-search
+          kagi-translate
         ];
         settings = {
           # GPU
