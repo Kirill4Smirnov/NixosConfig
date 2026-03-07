@@ -158,7 +158,7 @@ in {
       cliNice = [
         fzf
         git
-        neofetch
+        fastfetch
         alejandra
         eza
         # bottles
