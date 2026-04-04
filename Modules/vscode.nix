@@ -151,7 +151,7 @@
 
         # UI
         "window.zoomLevel" = 1.25;
-        "workbench.colorTheme" = "Abyss";
+        "workbench.colorTheme" = "Dark High Contrast";
         "terminal.integrated.enableMultiLinePasteWarning" = false;
 
         # Other

@@ -117,6 +117,7 @@ in {
       ];
 
       devTools = [
+        qemu
         go
         golangci-lint
         rustup
