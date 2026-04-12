@@ -105,7 +105,9 @@ in {
   environment = {
     systemPackages = with pkgs; let
       base = [
-        amnezia-vpn
+        # amnezia-vpn
+        amneziawg-go
+        amneziawg-tools
         vim
         wget
       ];
