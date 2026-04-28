@@ -62,6 +62,8 @@
         vm.stkb.rewrap
         vm.tyriar.sort-lines
         (vm.fill-labs.dependi.override {meta.license = [];})
+        pkgs.vscode-extensions.ms-vscode-remote.remote-ssh
+
         # vm.asvetliakov.vscode-neovim
 
         # vm.github.github-vscode-theme

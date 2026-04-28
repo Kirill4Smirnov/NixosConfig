@@ -14,10 +14,10 @@
 
     nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
 
-    mathematica-installer = {
-      url = "/home/kenlog/Mathematica_14.0.0_BNDL_LINUX.sh";
-      flake = false;
-    };
+    # mathematica-installer = {
+    #   url = "/home/kenlog/Mathematica_14.0.0_BNDL_LINUX.sh";
+    #   flake = false;
+    # };
   };
 
   outputs = inputs @ {

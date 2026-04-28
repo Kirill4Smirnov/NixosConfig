@@ -116,6 +116,7 @@ in {
         inxi
         htop
         pciutils
+        bind
       ];
 
       devTools = [

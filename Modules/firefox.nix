@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  config,
+  ...
+}: {
   home-manager.users.kenlog = {
     programs.firefox = {
       enable = true;
