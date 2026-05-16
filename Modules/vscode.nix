@@ -64,6 +64,7 @@
         (vm.fill-labs.dependi.override {meta.license = [];})
         pkgs.vscode-extensions.ms-vscode-remote.remote-ssh
         # vm.saoudrizwan.claude-dev # cline
+        vm.openai.chatgpt
 
         # vm.asvetliakov.vscode-neovim
 
