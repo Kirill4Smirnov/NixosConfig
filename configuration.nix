@@ -157,6 +157,8 @@ in {
         obsidian
         flclash
         tauon
+        codex
+        opencode
       ];
 
       cliNice = [
