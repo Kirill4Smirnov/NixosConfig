@@ -5,6 +5,7 @@
 }: {
   home-manager.users.kenlog = {
     programs.firefox = {
+      configPath = ".mozilla/firefox";
       enable = true;
       profiles.default = {
         isDefault = true;
