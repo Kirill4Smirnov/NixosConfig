@@ -3,6 +3,7 @@
   lib,
   pkgs,
   inputs,
+  binaryCaches,
   ...
 }: let
   username = "kenlog";
@@ -84,6 +85,13 @@ in {
     options = "--delete-older-than 60d";
   };
 
+  nix.settings = {
+    accept-flake-config = true;
+    substituters = lib.mkForce binaryCaches.substituters;
+    trusted-public-keys = lib.mkForce binaryCaches.trusted-public-keys;
+    trusted-users = ["root" "@wheel"];
+  };
+
   programs.partition-manager.enable = true;
   programs.nix-ld.enable = true;
 
@@ -110,6 +118,7 @@ in {
         amneziawg-tools
         vim
         wget
+        poppler-utils
       ];
 
       systemTools = [
