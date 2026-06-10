@@ -87,6 +87,9 @@ in {
 
   nix.settings = {
     accept-flake-config = true;
+    download-attempts = binaryCaches.download-attempts;
+    fallback = binaryCaches.fallback;
+    stalled-download-timeout = binaryCaches.stalled-download-timeout;
     substituters = lib.mkForce binaryCaches.substituters;
     trusted-public-keys = lib.mkForce binaryCaches.trusted-public-keys;
     trusted-users = ["root" "@wheel"];
