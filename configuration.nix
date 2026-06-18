@@ -191,6 +191,7 @@ in {
         libGL
         unrar
         asciinema
+        ripgrep
       ];
     in
       base
