@@ -113,6 +113,8 @@ in {
     ];
   };
 
+  hm.dconf.settings."org/gnome/desktop/sound".event-sounds = false;
+
   environment = {
     systemPackages = with pkgs; let
       base = [
