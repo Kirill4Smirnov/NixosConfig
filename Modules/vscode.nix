@@ -9,8 +9,16 @@
   ];
 
   hm = {
-    home.packages = with pkgs; [
-      poetry
+    home.packages = [
+      (pkgs.poetry.overridePythonAttrs (old: {
+        # Nix removes virtualenv's bundled wheels, but these tests expect them.
+        disabledTests =
+          (old.disabledTests or [])
+          ++ [
+            "test_execute_executes_a_batch_of_operations"
+            "test_execute_prints_warning_for_yanked_package"
+          ];
+      }))
     ];
 
     programs.vscode = {
