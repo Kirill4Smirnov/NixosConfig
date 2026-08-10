@@ -1,6 +1,7 @@
 {
   lib,
   pkgs,
+  inputs,
   binaryCaches,
   ...
 }: let
@@ -80,7 +81,7 @@ in {
   nix.gc = {
     automatic = true;
     dates = "weekly";
-    options = "--delete-older-than 60d";
+    options = "--delete-older-than 40d";
   };
 
   nix.settings = {
@@ -167,7 +168,7 @@ in {
         docker-compose
         # jetbrains.clion
         obsidian
-        flclash
+        inputs.flclash-nixpkgs.legacyPackages.${pkgs.stdenv.hostPlatform.system}.flclash
         tauon
         codex
         opencode
