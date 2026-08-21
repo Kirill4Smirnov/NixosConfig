@@ -10,5 +10,7 @@
     ./wezterm.nix
     # ./mathematica.nix
     # ./open-webui.nix
+    ./gnome-shell.nix
+    # ./gnome-keyring.nix
   ];
 }

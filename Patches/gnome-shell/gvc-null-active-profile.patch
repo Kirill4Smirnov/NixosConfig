@@ -1,0 +1,17 @@
+From: Configuration <local@nixos>
+Subject: [PATCH] gvc: guard a missing PulseAudio active profile
+
+PipeWire PulseAudio can transiently report a card with ports but no profiles
+during startup. In that state pa_card_info.active_profile is NULL. Do not
+dereference it while updating GNOME Shell's volume control state.
+
+--- a/subprojects/gvc/gvc-mixer-control.c
++++ b/subprojects/gvc/gvc-mixer-control.c
+@@ -2611 +2611,2 @@ update_card (GvcMixerControl      *control,
+-                is_default = (g_strcmp0 (pi.name, info->active_profile->name) == 0);
++                is_default = (info->active_profile != NULL &&
++                              g_strcmp0 (pi.name, info->active_profile->name) == 0);
+@@ -2649 +2650,2 @@ update_card (GvcMixerControl      *control,
+-        gvc_mixer_card_set_profile (card, info->active_profile->name);
++        if (info->active_profile != NULL)
++                gvc_mixer_card_set_profile (card, info->active_profile->name);
