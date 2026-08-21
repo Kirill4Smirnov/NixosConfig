@@ -12,5 +12,6 @@
     # ./open-webui.nix
     ./gnome-shell.nix
     # ./gnome-keyring.nix
+    ./v2ray.nix
   ];
 }

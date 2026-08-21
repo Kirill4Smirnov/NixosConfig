@@ -169,7 +169,6 @@ in {
         # jetbrains.clion
         obsidian
         inputs.flclash-nixpkgs.legacyPackages.${pkgs.stdenv.hostPlatform.system}.flclash
-        v2rayn
 
         tauon
         codex
