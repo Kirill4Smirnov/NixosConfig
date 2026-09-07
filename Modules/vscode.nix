@@ -3,7 +3,29 @@
   pkgs,
   lib,
   ...
-}: {
+}: let
+  codexModelCatalog = pkgs.runCommand "codex-model-catalog.json" {nativeBuildInputs = [pkgs.jq];} ''
+    set -o pipefail
+    ${lib.getExe pkgs.codex} debug models --bundled 2>/dev/null \
+      | jq '
+          .models[0] as $base
+          | .models = [
+              ($base
+                | .slug = "gpt-6-astra"
+                | .display_name = "GPT-6 Astra"
+                | .description = "GPT-6 Astra via the configured model provider."
+                | .priority = 0
+                | .visibility = "list")
+            ] + .models
+        ' > "$out"
+  '';
+
+  codexForVscode = pkgs.writeShellScriptBin "codex" ''
+    exec ${lib.getExe pkgs.codex} \
+      -c 'model_catalog_json="${codexModelCatalog}"' \
+      "$@"
+  '';
+in {
   imports = [
     ./python.nix
   ];
@@ -167,6 +189,7 @@
         "terminal.integrated.enableMultiLinePasteWarning" = false;
 
         # Other
+        "chatgpt.cliExecutable" = lib.getExe codexForVscode;
         "direnv.restart.automatic" = true;
         "editor.formatOnSave" = true;
         "editor.quickSuggestions".strings = true;
