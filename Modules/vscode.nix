@@ -187,6 +187,9 @@ in {
         "window.zoomLevel" = 1.25;
         "workbench.colorTheme" = "Dark High Contrast";
         "terminal.integrated.enableMultiLinePasteWarning" = false;
+        "workbench.editorAssociations" = {
+          "*.md" = "vscode.markdown.preview.editor";
+        };
 
         # Other
         "chatgpt.cliExecutable" = lib.getExe codexForVscode;
