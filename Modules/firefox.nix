@@ -16,6 +16,7 @@
           vimium
           kagi-search
           kagi-translate
+          darkreader
         ];
         settings = {
           # GPU

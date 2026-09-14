@@ -67,6 +67,8 @@ in {
     ];
   };
 
+  # services.librechatDocker.enable = true;
+
   users.users.${username} = {
     isNormalUser = true;
     extraGroups = [
@@ -194,6 +196,7 @@ in {
         unrar
         asciinema
         ripgrep
+        ripgrep-all
       ];
     in
       base
