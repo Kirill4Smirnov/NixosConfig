@@ -30,17 +30,11 @@ in {
     ./python.nix
   ];
 
+  nixpkgs.overlays = [inputs.nix-vscode-extensions.overlays.default];
+
   hm = {
     home.packages = [
-      (pkgs.poetry.overridePythonAttrs (old: {
-        # Nix removes virtualenv's bundled wheels, but these tests expect them.
-        disabledTests =
-          (old.disabledTests or [])
-          ++ [
-            "test_execute_executes_a_batch_of_operations"
-            "test_execute_prints_warning_for_yanked_package"
-          ];
-      }))
+      pkgs.poetry
     ];
 
     programs.vscode = {
@@ -52,13 +46,12 @@ in {
       profiles.default.enableExtensionUpdateCheck = false;
 
       profiles.default.extensions = let
-        vm = inputs.nix-vscode-extensions.extensions.${pkgs.system}.vscode-marketplace;
+        vm = pkgs.vscode-marketplace;
       in [
         # Python
         vm.ms-python.python
-        (vm.ms-python.vscode-pylance.override {meta.license = [];})
+        vm.ms-python.vscode-pylance
         vm.ms-python.mypy-type-checker
-        # vm.ms-python.black-formatter
         vm.ms-python.isort
         vm.njpwerner.autodocstring
         vm.ms-python.autopep8
@@ -68,13 +61,11 @@ in {
         # Jupyter
         pkgs.vscode-extensions.ms-toolsai.jupyter
         pkgs.vscode-extensions.ms-toolsai.jupyter-renderers
-        # vm.ms-toolsai.datawrangler
 
         # Other languages
         vm.golang.go
         pkgs.vscode-extensions.ms-vscode.cpptools
         pkgs.vscode-extensions.ms-vscode.cmake-tools
-        # pkgs.vscode-extensions.llvm-vs-code-extensions.vscode-clangd
         vm.twxs.cmake
         vm."13xforever".language-x86-64-assembly
         vm.jnoortheen.nix-ide
@@ -91,14 +82,9 @@ in {
         vm.mkhl.direnv
         vm.stkb.rewrap
         vm.tyriar.sort-lines
-        (vm.fill-labs.dependi.override {meta.license = [];})
+        vm.fill-labs.dependi
         pkgs.vscode-extensions.ms-vscode-remote.remote-ssh
-        # vm.saoudrizwan.claude-dev # cline
         vm.openai.chatgpt
-
-        # vm.asvetliakov.vscode-neovim
-
-        # vm.github.github-vscode-theme
       ];
       profiles.default.userSettings = {
         # Nix
@@ -121,7 +107,6 @@ in {
         "rust-analyzer.check.command" = "clippy";
 
         # CPP
-        #"C_Cpp.default.compilerPath" = "${pkgs.clang}/bin/clang";
         "C_Cpp.default.compilerPath" = "/run/current-system/sw/bin/clang++";
         "cmake.cmakePath" = "/run/current-system/sw/bin/cmake";
 
@@ -143,7 +128,6 @@ in {
         # Python
         "python.analysis.autoImportCompletions" = true;
 
-        # "black-formatter.path" = ["${pkgs.black}/bin/black"];
         "python.formatting.provider" = "autopep8";
         "python.editor.defaultFormatter" = "ms-python.autopep8";
 
@@ -154,8 +138,6 @@ in {
           "error" = "Warning";
           "note" = "Information";
         };
-        # "mypy-type-checker.path" = [ "${pkgs.mypy}/bin/mypy" ];
-
         "python.defaultInterpreterPath" = "\${workspaceFolder}/.venv/bin/python";
         "python.terminal.activateEnvironment" = true;
         "python.venvFolders" = [
@@ -167,9 +149,6 @@ in {
 
         "python.testing.pytestEnabled" = true;
         "python.testing.pytestPath" = "${pkgs.python3Packages.pytest}/bin/pytest";
-
-        # "jupyter.themeMatplotlibPlots" = true;
-        # "python.formatting.blackArgs" = ["-l120" "-tpy311"];
 
         # VCS
         "diffEditor.ignoreTrimWhitespace" = false;

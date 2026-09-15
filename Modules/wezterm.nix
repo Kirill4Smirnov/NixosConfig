@@ -1,8 +1,4 @@
-{
-  pkgs,
-  config,
-  ...
-}: {
+{...}: {
   hm = {
     programs.wezterm = {
       enable = true;

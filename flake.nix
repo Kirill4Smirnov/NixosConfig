@@ -17,7 +17,6 @@ rec {
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
     flclash-nixpkgs.url = "github:nixos/nixpkgs/624af665418d3c65d544145b4d34ad696439570e";
 
     home-manager = {
@@ -27,14 +26,15 @@ rec {
 
     nixcfg.url = "github:kirill4smirnov/nixcfg";
 
-    nur.url = "github:nix-community/NUR";
+    nur = {
+      url = "github:nix-community/NUR";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
-    nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
-
-    # mathematica-installer = {
-    #   url = "/home/kenlog/Mathematica_14.0.0_BNDL_LINUX.sh";
-    #   flake = false;
-    # };
+    nix-vscode-extensions = {
+      url = "github:nix-community/nix-vscode-extensions";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = inputs @ {
@@ -47,7 +47,7 @@ rec {
     binaryCaches = nixConfig;
   in {
     nixosConfigurations.KenNix = nixpkgs.lib.nixosSystem {
-      system = system;
+      inherit system;
       specialArgs = {
         inherit inputs binaryCaches;
       };

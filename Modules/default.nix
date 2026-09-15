@@ -1,4 +1,4 @@
-{inputs, ...}: {
+{...}: {
   imports = [
     ./Hardware/hardware-configuration.nix
     ./obs-virt-cam.nix
@@ -8,11 +8,8 @@
     ./brave.nix
     ./nushell.nix
     ./wezterm.nix
-    # ./mathematica.nix
     ./open-webui.nix
-    # ./librechat.nix
     ./gnome-shell.nix
-    # ./gnome-keyring.nix
     ./v2ray.nix
   ];
 }

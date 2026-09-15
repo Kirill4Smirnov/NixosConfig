@@ -27,12 +27,7 @@ in {
 
   hardware.graphics.enable = true;
 
-  nixpkgs.config = {
-    allowUnfree = true;
-    permittedInsecurePackages = [
-      "qtwebengine-5.15.19"
-    ];
-  };
+  nixpkgs.config.allowUnfree = true;
 
   services = {
     displayManager = {
@@ -48,15 +43,6 @@ in {
     printing.enable = true;
 
     libinput.enable = true;
-
-    pulseaudio.enable = lib.mkForce false;
-
-    # pipewire = {
-    #   enable = true;
-    #   alsa.enable = true;
-    #   alsa.support32Bit = true;
-    #   pulse.enable = true;
-    # };
   };
 
   virtualisation.docker = {
@@ -66,8 +52,6 @@ in {
       "unix:///var/run/docker.sock"
     ];
   };
-
-  # services.librechatDocker.enable = true;
 
   users.users.${username} = {
     isNormalUser = true;
@@ -93,7 +77,6 @@ in {
     stalled-download-timeout = binaryCaches.stalled-download-timeout;
     substituters = lib.mkForce binaryCaches.substituters;
     trusted-public-keys = lib.mkForce binaryCaches.trusted-public-keys;
-    trusted-users = ["root" "@wheel"];
   };
 
   programs.partition-manager.enable = true;
@@ -108,7 +91,6 @@ in {
     enable = true;
     extensions = with pkgs.gnomeExtensions; [
       {package = vitals;}
-      # {package = hibernate-status-button;}
       {package = power-off-options;}
       {package = blur-my-shell;}
     ];
@@ -118,8 +100,18 @@ in {
 
   environment = {
     systemPackages = with pkgs; let
+      # TODO: remove after nixpkgs packages a Tauon release containing the
+      # corrected desktop entry from upstream.
+      tauonFixed = tauon.overrideAttrs (old: {
+        postInstall =
+          (old.postInstall or "")
+          + ''
+            substituteInPlace "$out/share/applications/tauonmb.desktop" \
+              --replace-fail "Exec=tauonmb %U" "Exec=tauon %U"
+          '';
+      });
+
       base = [
-        # amnezia-vpn
         amneziawg-go
         amneziawg-tools
         vim
@@ -150,12 +142,9 @@ in {
 
       desktopApps = [
         gimp
-        # terminator
-        # gparted
         gnome-tweaks
         gnome-themes-extra
         power-profiles-daemon
-        # telegram-desktop
         ayugram-desktop
         signal-desktop
         keepassxc
@@ -166,13 +155,10 @@ in {
         kdePackages.okular
         vlc
         endeavour
-        code-cursor
         docker-compose
-        # jetbrains.clion
         obsidian
         inputs.flclash-nixpkgs.legacyPackages.${pkgs.stdenv.hostPlatform.system}.flclash
-
-        tauon
+        tauonFixed
         codex
         opencode
       ];
@@ -183,8 +169,6 @@ in {
         fastfetch
         alejandra
         eza
-        # bottles
-        # tribler # doesn't have a desktop entry, starting from terminal gives a web interface
         ncdu
         dust
         neovim

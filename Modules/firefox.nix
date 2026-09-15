@@ -1,16 +1,11 @@
-{
-  pkgs,
-  config,
-  ...
-}: {
-  home-manager.users.kenlog = {
+{pkgs, ...}: {
+  hm = {
     programs.firefox = {
       configPath = ".mozilla/firefox";
       enable = true;
       profiles.default = {
         isDefault = true;
         extensions.packages = with pkgs.nur.repos.rycee.firefox-addons; [
-          # simple-translate
           decentraleyes
           ublock-origin
           vimium
