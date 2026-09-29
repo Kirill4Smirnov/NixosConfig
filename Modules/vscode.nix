@@ -85,6 +85,7 @@ in {
         vm.fill-labs.dependi
         pkgs.vscode-extensions.ms-vscode-remote.remote-ssh
         vm.openai.chatgpt
+        vm.openai.codex-audio
       ];
       profiles.default.userSettings = {
         # Nix
