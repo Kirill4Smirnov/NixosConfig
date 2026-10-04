@@ -1,7 +1,6 @@
 {
   lib,
   pkgs,
-  inputs,
   binaryCaches,
   ...
 }: let
@@ -161,7 +160,7 @@ in {
         endeavour
         docker-compose
         obsidian
-        inputs.flclash-nixpkgs.legacyPackages.${pkgs.stdenv.hostPlatform.system}.flclash
+        (pkgs.callPackage ./Packages/flclash.nix {})
         tauonFixed
         codex
         opencode

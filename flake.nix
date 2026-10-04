@@ -17,7 +17,6 @@ rec {
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    flclash-nixpkgs.url = "github:nixos/nixpkgs/624af665418d3c65d544145b4d34ad696439570e";
 
     home-manager = {
       url = "github:nix-community/home-manager";
