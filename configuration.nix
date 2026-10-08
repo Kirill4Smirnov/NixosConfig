@@ -103,17 +103,6 @@ in {
 
   environment = {
     systemPackages = with pkgs; let
-      # TODO: remove after nixpkgs packages a Tauon release containing the
-      # corrected desktop entry from upstream.
-      tauonFixed = tauon.overrideAttrs (old: {
-        postInstall =
-          (old.postInstall or "")
-          + ''
-            substituteInPlace "$out/share/applications/tauonmb.desktop" \
-              --replace-fail "Exec=tauonmb %U" "Exec=tauon %U"
-          '';
-      });
-
       base = [
         amneziawg-go
         amneziawg-tools
@@ -161,10 +150,10 @@ in {
         docker-compose
         obsidian
         (pkgs.callPackage ./Packages/flclash.nix {})
-        tauonFixed
+        tauon
         codex
         opencode
-        claude-code
+        code-cursor
       ];
 
       cliNice = [
