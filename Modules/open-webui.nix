@@ -1,6 +1,16 @@
-{...}: {
+{pkgs, ...}: let
+  open-webui-fixed = pkgs.open-webui.overridePythonAttrs (_old: {
+    # make-shell-wrapper now expects each wrapper argument separately.
+    makeWrapperArgs = [
+      "--set"
+      "FRONTEND_BUILD_DIR"
+      "${pkgs.open-webui.frontend}/share/open-webui"
+    ];
+  });
+in {
   services.open-webui = {
     enable = true;
+    package = open-webui-fixed;
     host = "127.0.0.1";
     port = 8085;
     environment = {

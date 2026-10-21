@@ -1,6 +1,10 @@
 {config, ...}: {
-  boot.extraModulePackages = with config.boot.kernelPackages; [
-    v4l2loopback
+  boot.extraModulePackages = [
+    (config.boot.kernelPackages.v4l2loopback.overrideAttrs (old: {
+      # Kernel 6.12.113 runs depmod during modules_install. Its generated
+      # modules.* files then collide with the kernel's own module metadata.
+      makeFlags = (old.makeFlags or []) ++ ["DEPMOD=true"];
+    }))
   ];
   boot.kernelModules = ["v4l2loopback"];
   boot.extraModprobeConfig = ''
