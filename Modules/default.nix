@@ -8,7 +8,7 @@
     ./brave.nix
     ./nushell.nix
     ./wezterm.nix
-    ./open-webui.nix
+    # ./open-webui.nix
     ./gnome-shell.nix
     ./v2ray.nix
   ];

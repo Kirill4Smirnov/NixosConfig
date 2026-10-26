@@ -170,7 +170,6 @@ in {
         vlc
         endeavour
         docker-compose
-        obsidian
         (pkgs.callPackage ./Packages/flclash.nix {})
         tauonFixed
         codex
