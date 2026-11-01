@@ -103,28 +103,6 @@ in {
 
   environment = {
     systemPackages = with pkgs; let
-      tauonFixed = tauon.overridePythonAttrs (old: {
-        # Tauon 13.0.0 currently wraps GI_TYPELIB_PATH as the literal string
-        # "$GI_TYPELIB_PATH", so PyGObject cannot discover Pango and friends.
-        makeWrapperArgs =
-          lib.take ((builtins.length old.makeWrapperArgs) - 3) old.makeWrapperArgs
-          ++ [
-            "--prefix"
-            "GI_TYPELIB_PATH"
-            ":"
-            (lib.makeSearchPath "lib/girepository-1.0" (map lib.getLib [
-              cairo
-              gdk-pixbuf
-              glib
-              gtk3
-              libayatana-appindicator
-              libnotify
-              librsvg
-              pango
-            ]))
-          ];
-      });
-
       base = [
         amneziawg-go
         amneziawg-tools
@@ -171,7 +149,7 @@ in {
         endeavour
         docker-compose
         (pkgs.callPackage ./Packages/flclash.nix {})
-        tauonFixed
+        tauon
         codex
         opencode
         code-cursor
