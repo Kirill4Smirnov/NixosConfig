@@ -1,6 +1,7 @@
 {
   lib,
   pkgs,
+  inputs,
   binaryCaches,
   ...
 }: let
@@ -13,7 +14,8 @@ in {
 
   # Generations using Linux 6.18.51+ fail before the LUKS prompt on the
   # UnionMemory AM541 NVMe controller (PCI 1cc4:5414).
-  boot.kernelPackages = pkgs.linuxPackages_6_12;
+  boot.kernelPackages =
+    inputs.nixpkgs-kernel.legacyPackages.${pkgs.stdenv.hostPlatform.system}.linuxPackages_6_12;
 
   boot.initrd.luks.devices."luks-486bb194-339e-47d8-bb1e-0b9b1aaf2a32".device = "/dev/disk/by-uuid/486bb194-339e-47d8-bb1e-0b9b1aaf2a32";
 

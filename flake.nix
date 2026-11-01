@@ -18,6 +18,10 @@ rec {
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
+    # Linux 6.12.114 broke Bluetooth L2CAP getsockopt dispatch. Keep only the
+    # kernel on the first nixpkgs revision containing the 6.12.115 fix.
+    nixpkgs-kernel.url = "github:nixos/nixpkgs/13c228a83f900165572e5328b5f3944b00632ef0";
+
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";

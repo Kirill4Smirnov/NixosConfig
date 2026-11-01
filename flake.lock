@@ -95,6 +95,22 @@
         "type": "github"
       }
     },
+    "nixpkgs-kernel": {
+      "locked": {
+        "lastModified": 1793365041,
+        "narHash": "sha256-/MgKYBVExRIDd1f6/ITb4FhLWdtwigI8BrdjhK4EwQI=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "13c228a83f900165572e5328b5f3944b00632ef0",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "13c228a83f900165572e5328b5f3944b00632ef0",
+        "type": "github"
+      }
+    },
     "nur": {
       "inputs": {
         "flake-parts": "flake-parts",
@@ -122,6 +138,7 @@
         "nix-vscode-extensions": "nix-vscode-extensions",
         "nixcfg": "nixcfg",
         "nixpkgs": "nixpkgs",
+        "nixpkgs-kernel": "nixpkgs-kernel",
         "nur": "nur"
       }
     },
