@@ -5,7 +5,7 @@
     ./firefox.nix
     ./vscode.nix
     ./firejail.nix
-    ./brave.nix
+   # ./brave.nix
     ./nushell.nix
     ./wezterm.nix
     # ./open-webui.nix

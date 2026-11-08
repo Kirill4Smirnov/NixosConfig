@@ -155,6 +155,7 @@ in {
         codex
         opencode
         code-cursor
+        chromium
       ];
 
       cliNice = [
